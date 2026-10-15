@@ -1,0 +1,38 @@
+{
+  "source": "https://docs.google.com/forms/d/e/1FAIpQLSfyrM4dhc8QzxR90PtF6fb018KPf0S0Cbf5hPqMuUognmzQsA/viewform",
+  "verified_via_browser": "2026-10-14",
+  "submitted": false,
+  "files_uploaded": false,
+  "approved_account": "jacman1988@gmail.com",
+  "form_account_selection_pending": true,
+  "fields": {
+    "email": "jacman1988@gmail.com",
+    "full_names": "Jacek Adamek",
+    "member_emails": "jacman1988@gmail.com",
+    "institutes_optional": "",
+    "countries": "Poland",
+    "public_git_url": null,
+    "exact_kaggle_submission_file": "results/v3/candidate.csv",
+    "technical_report": "report/technical-report-final-ACM.pdf"
+  },
+  "pending": [
+    "Public repository has not been created or published.",
+    "No Kaggle upload has occurred, so the required exact-file equivalence is prepared locally only.",
+    "Participant review and explicit authorization before external submission."
+  ],
+  "observed_upload_limits": {
+    "submission_file_bytes": 10485760,
+    "report_bytes": 104857600
+  },
+  "local_files": {
+    "results/v3/candidate.csv": {
+      "bytes": 267766,
+      "sha256": "2a58ee67e8beaa23187921d03bd7f2222db5c747ca8bfd3e7db0a9852f7a2f56"
+    },
+    "report/technical-report-final-ACM.pdf": {
+      "bytes": 424173,
+      "sha256": "a8198f3603f00c587238808439d70ff4755fb47400a6aca7753b0e1e764302ba"
+    }
+  },
+  "author_name_confirmed_by_participant": true
+}

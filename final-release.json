@@ -1,0 +1,24 @@
+{
+  "author": "Jacek Adamek",
+  "recommended_candidate": "results/v3/candidate.csv",
+  "alternative_candidate": "results/precision-guard/candidate.csv",
+  "alternative_independently_validated": false,
+  "technical_report": "report/technical-report-final-ACM.pdf",
+  "ready_for_local_review": true,
+  "published": false,
+  "submitted": false,
+  "files": {
+    "results/v3/candidate.csv": "2a58ee67e8beaa23187921d03bd7f2222db5c747ca8bfd3e7db0a9852f7a2f56",
+    "results/precision-guard/candidate.csv": "3ec17f631afbc7e4edb320cf9f6deb5f87ab73759510223fdec33bfa43c36f4c",
+    "results/precision-guard/candidate.audit.json": "d2b772bb3ccbff8040403cd31b659ca56500c650f53a82a6c902ea34eb25d653",
+    "report/technical-report-final-ACM.pdf": "a8198f3603f00c587238808439d70ff4755fb47400a6aca7753b0e1e764302ba",
+    "solar_precision_guard.py": "0e1b4fd02afa75ee9f42bd4469c36a53798a5194565b4ca39f48aaff2323130e",
+    "predict_precision_guard.py": "c9fcee68bf9fecf119e36b81df25c9bb57dce8f56f675a02987e855c7b40f5ba",
+    "verify_final.py": "8e844657c3f6169b668123fdb0b0ae9863c937f04f61d8a17e3551962153fad2",
+    "submission-draft.json": "53172f0a1a3a44531b9bff4293b171048395cacece0a0005572b76e7a50125ec",
+    "audit_candidate.py": "c270bb1c98f4f5eb48f4d8d8bb86e878c7ecbbee93d3468b3c9bb9931be44e6c",
+    "check_release.py": "271387c9eb3efaa4582b291378f53402a360bb1e7bab6fc7da019d28355f4320",
+    "test_candidate_audit.py": "da48395228dac432bc2e0e7f984ba6e6757235ce0cc10db34ad81f9f2a94024a",
+    "submission-requirements-review.json": "0f271d243c6d40465dd24b23c3ba53e4501f0d816eedc307607275dcb473d28b"
+  }
+}

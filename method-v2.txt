@@ -1,0 +1,47 @@
+ThreadMask v2 — explanation for the participant
+
+1. Find the solar disk from the image. Pixels brighter than 22% of its 90th
+   intensity percentile form a mask; keep the largest connected region and fill
+   interior holes. Unlike a fixed circle, this follows an offset disk.
+2. Keep pixels more than 24 processing pixels inside that region. This reduces
+   edge artifacts, at the cost of losing genuine filaments near the limb.
+3. Estimate background with Gaussian smoothing, dividing by smoothed disk
+   occupancy. Outside-disk black pixels therefore do not darken the estimate.
+4. Measure darkness relative to that background, rather than in raw intensity
+   units. Low threshold proposes candidates; a stronger threshold supplies seeds.
+5. Close small gaps with one morphological step; keep connected regions with
+   seeds and a minimum area. Reject regions larger than 3% of usable disk area.
+   Closing can also merge nearby filaments, and large real filaments can be lost.
+6. Process at 1024x1024 for CPU efficiency. Enlarge integer instance labels to
+   2048x2048 using nearest-neighbor interpolation so labels do not mix.
+
+Parameters: the sigma controls the spatial scale of estimated background; low
+controls sensitivity; minimum area controls small-noise rejection. A 24-choice
+grid varies those three settings on a preselected development set. All other
+choices were set before the new blind set was evaluated. See frozen-config.json.
+
+Historical diagnostic evaluation: for every independent annotator set, compare predicted and true
+instances with IoU > 0.5 matching. Average annotators for an observation before
+averaging observations. This local implementation has not been certified against
+the organizer's scorer. Do not call its number a Kaggle leaderboard score.
+
+Current public-v6 evaluation: organizer_metric.py counts every IoU > .5 pair
+and pools TP IoU sums, TP, FP and FN over annotator-image entries before division.
+It does not use Hungarian matching or image-averaged PQ. The extracted public
+scoring functions agree exactly on our real overlap matrices via a NumPy adapter.
+This verifies public-function arithmetic, not execution of Torch or the private
+Kaggle scoring service. See results/public-v6/evaluation.json.
+
+The original 135-image holdout informed this redesign and is no longer blind.
+The v2 experiment reserves 96 previously uninspected development days (100 images)
+and tunes on 32 other days (35 images). Solar structures may persist across days;
+a day-group split does not eliminate every kind of temporal dependence.
+After v2 results are examined, that set is also no longer blind for later changes.
+One prospective observation, 20110109104734Ch.jpeg, had previously been processed
+solely to verify sparse RLE pixels against dense instance labels. Its annotations
+and prediction quality were not evaluated or used in tuning at that stage.
+
+No neural network, external model, paid inference or test labels are used.
+These are established image-processing operations, not a claim of scientific novelty.
+Participant understanding, metric parity, final report and submission requirements
+must still be addressed before a contest submission.

@@ -1,0 +1,39 @@
+ThreadMask: a reproducible local-contrast baseline for solar filament instances
+Technical report plan, NOT the required final 4-page PDF.
+
+Later v2 results supersede v1 for current development: see results/v2/summary.json,
+method-v2.txt and README.md. A new prospective comparison on 100 images yielded
+PQ 0.010947 for v1 and 0.099168 for v2. The remaining text preserves the original
+v1 report plan; rewrite the final template-based report around the chosen method.
+
+Motivation: A low-compute baseline is useful for establishing whether subsequent
+instance segmentation models justify their complexity on independent observing days.
+
+Method: Grayscale only. Gaussian background sigma 16 pixels; subtract input from
+background; robust median/MAD normalization inside a fixed 95% diameter disk; weak
+threshold 2 and strong threshold 4; 8-connected components; retain components with
+a strong seed and >=24 pixels. No closing, no trained weights, no external features.
+All defaults are provisional and have not been calibrated on real solar observations.
+
+Validation: group by date across instruments and annotators, hold out about 20% of
+days by deterministic hash. Evaluate annotation sets independently and aggregate
+within observation before across observations. Review metric parity with the official
+notebook. Add date-cluster bootstrap intervals and runtime/memory measurements.
+
+Results update: real data validation is now available in results/validation.json and
+results/summary.json. Diagnostic PQ 0.010915 on 135 held-out observations; 95% date-
+cluster bootstrap interval 0.008896–0.013011. No leaderboard score is claimed.
+The method is a weak baseline and should not be represented as contest-ready.
+
+Ablations to run: single threshold vs seeded hysteresis; sigma sensitivity; min-area
+sensitivity; disk size sensitivity. Tune on development days only. Inspect cases of
+over-merging, fragmentation, solar limb artifacts and dark non-filament structures.
+
+Limitations: fixed disk geometry, no filament orientation or physical model, no
+guarantee that connected components correspond to physical filaments. Real data
+performance, statistical uncertainty and computational costs remain to be measured.
+
+References to verify and cite in final report: MAGFiLO DOI 10.1038/s41597-024-03876-y;
+Panoptic Segmentation DOI 10.1109/CVPR.2019.00963; official challenge pages and evaluation
+notebook. Follow the exact Overleaf template, including required fixed sections.
+AI use: Codex helped implement code and draft documentation; participant review pending.

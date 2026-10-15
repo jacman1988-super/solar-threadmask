@@ -1,0 +1,10 @@
+{
+  "author": "Jacek Adamek",
+  "repository_url": "https://github.com/jacman1988-super/solar-threadmask",
+  "publication_authorized": true,
+  "scope": "Reviewed code and reports; no competition submission",
+  "competition_submitted": false,
+  "new_rules_accepted": false,
+  "original_review_manifest_sha256": "afd6d314b2a7a9caa9c06d63bda296f36e83c97afba016a9b57e08ce70aa9e3b",
+  "public_release_notes": "README updated for public visibility. Dated research/verification snapshots remain unchanged."
+}

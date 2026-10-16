@@ -1,0 +1,21 @@
+{
+  "validator": "nbformat 5.10.4",
+  "all_valid": true,
+  "files": {
+    "pipeline-update-executed.ipynb": {
+      "schema_valid": true,
+      "nbformat": 4,
+      "nbformat_minor": 5,
+      "code_sha256": "ba35e0abe119512948efa40321ca4b28fd4e3bbf0bbf9a61c223c49139158149",
+      "executed_code_cells": 4
+    },
+    "pipeline-update.ipynb": {
+      "schema_valid": true,
+      "nbformat": 4,
+      "nbformat_minor": 5,
+      "code_sha256": "ba35e0abe119512948efa40321ca4b28fd4e3bbf0bbf9a61c223c49139158149",
+      "executed_code_cells": 0
+    }
+  },
+  "change": "Stable cell IDs added; notebook code unchanged from the clean-clone run."
+}

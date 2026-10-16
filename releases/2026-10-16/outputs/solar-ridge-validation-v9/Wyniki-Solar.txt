@@ -1,0 +1,20 @@
+Solar — dodatkowe 40 dat, 16.10.2026
+Autor: Jacek Adamek
+
+Bez uczenia i bez zmiany parametrów sprawdzono zamrożoną korektę pełnej rozdzielczości z etapu v8. Daty są rozłączne ze wszystkimi trzema podziałami obecnego v5 (uczenie, strojenie i wcześniejsza ocena), nie tylko z 60 zdjęciami modelu grzbietów. Starsze eksperymenty korzystały jednak z pozostałej puli; to dodatkowa kontrola rozwojowa, nie całkowicie świeży ślepy test.
+
+Dodatkowe 40 zdjęć/40 dat:
+baseline: PQ 0.285986; TP 224, FP 260, FN 300; cienkie 44/128 (34.38%).
+ridge: PQ 0.287015; TP 225, FP 259, FN 299; cienkie 44/128 (34.38%).
+
+Łącznie 146 zdjęć/135 dat:
+baseline: PQ 0.276155; TP 669, FP 810, FN 982; cienkie 126/442 (28.51%).
+ridge: PQ 0.277402; TP 672, FP 807, FN 979; cienkie 127/442 (28.73%).
+
+Warunek większej liczby cienkich trafień bez dodatkowych FP i bez spadku TP/PQ: dodatkowe 40 — False, łącznie — True.
+
+95% opisowy bootstrap po nowych datach: zmiana PQ [-0.000574, +0.003717], zmiana czułości cienkich [+0.00, +0.00] pkt proc. To nie eliminuje wcześniejszego używania danych i wielokrotnego projektowania metod.
+
+Selekcja: 40 dat według zamrożonego hasha, po jednym obrazie na datę, bez oglądania nowych wyników przed wyborem. Parametry pozostały [16, 0.2, 0]; użyto identycznych wag i cech. Predykcje wykonano przed odczytem masek danego obrazu do oceny. Każdy wynik maski ma zapisany SHA256, a liczba identyfikatorów instancji jest zachowana.
+
+Obecny model domyślny, CSV, raporty opublikowane i zgłoszenia są niezmienione. Wynik nie jest wynikiem Kaggle. Niczego nie opublikowano ani nie wysłano.

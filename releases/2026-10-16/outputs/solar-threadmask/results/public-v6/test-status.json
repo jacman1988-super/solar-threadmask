@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-14",
+  "tests_run": 20,
+  "passed": 20,
+  "failures": 0,
+  "errors": 0,
+  "new_metric_tests": 5,
+  "random_reference_matrix_trials": 100,
+  "scope": "Pure public-v6 scoring-function parity with NumPy adapter and compressed/dense overlap parity. Torch and private Kaggle service were not executed. Real-matrix parity errors are recorded in evaluation.json."
+}

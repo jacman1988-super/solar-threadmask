@@ -1,0 +1,362 @@
+[
+  {
+    "file": "assessment.json",
+    "bytes": 175718,
+    "sha256": "77cf355be0a51fc155e93b24e4b2760bb113b6773f10fd3f65b55bd0236b2c06"
+  },
+  {
+    "file": "build_results.py",
+    "bytes": 6307,
+    "sha256": "c955f53e777e7d69a2bd3f630af0dd5b8f6f8673798f9397febf92b9b3573258"
+  },
+  {
+    "file": "combined-assessment.json",
+    "bytes": 243210,
+    "sha256": "e850f67676630702b47a1678d54e693bdde9d2283e457a235f57ac038d5ac680"
+  },
+  {
+    "file": "component-assessment.json",
+    "bytes": 62457,
+    "sha256": "67fc380556068df14ca1c90a81ad3693d0f894e1d4cd7a792abe5a715eae0b65"
+  },
+  {
+    "file": "component-filter.joblib",
+    "bytes": 202157,
+    "sha256": "4a59087e6c165b42f5f402307d2a3add92fbd8f18c3ac05d9e078866128f7fe9"
+  },
+  {
+    "file": "component-frozen.json",
+    "bytes": 11790,
+    "sha256": "e3fb687cca110a87c132cd6e0afa36f26ddeac3dbfb1fc79dfd0bedb7da4b0c3"
+  },
+  {
+    "file": "component-protocol.json",
+    "bytes": 2939,
+    "sha256": "45041191b30078ad9681a827bfb9463efd1526cc994cbf17eb49eaa207e7caf2"
+  },
+  {
+    "file": "component_followup.py",
+    "bytes": 5733,
+    "sha256": "0f29651e0051f87b42b6679dc47ca2eaf06a1e93b252edeac80c33f46a6d22dd"
+  },
+  {
+    "file": "final-verification.json",
+    "bytes": 922,
+    "sha256": "1b738cf072cd55403b2b4037a4e0bfa2e58efd3a9fc208ea2eb49fd390a526d3"
+  },
+  {
+    "file": "inference.py",
+    "bytes": 2002,
+    "sha256": "15711f1ebd89f40c42c1fb1e12cc20cb5b3875dfa018857453f93cbd85135faa"
+  },
+  {
+    "file": "input-hashes.json",
+    "bytes": 46073,
+    "sha256": "8cb6b617f50a38f1fef63fb80a9ce0ff62828a4810a9bd2dcbf6f3fea3d252f4"
+  },
+  {
+    "file": "integration-checks.json",
+    "bytes": 466,
+    "sha256": "9cc1ed9e97788c3fda99ee60090659f4c85c987bc6c579a34b8e89a99a9678d8"
+  },
+  {
+    "file": "logs/solar-v5-assessment.log",
+    "bytes": 1949,
+    "sha256": "de58e2c90cda086eb8978a38c89b1258243c5c2f7bbb0baf1e3d230c347af8c2"
+  },
+  {
+    "file": "logs/solar-v5-component-assessment.log",
+    "bytes": 2860,
+    "sha256": "b31b402564b529f5d0c51892e801ea26c55acbe845d2271b16ee454b8f7797a4"
+  },
+  {
+    "file": "logs/solar-v5-component-fit.log",
+    "bytes": 1383,
+    "sha256": "b6d32d9d20c11747a7e5b8f6eff1afc85dfe3426cb4c957fb89e84ab0cd8db53"
+  },
+  {
+    "file": "logs/solar-v5-components-pipeline.log",
+    "bytes": 123,
+    "sha256": "a6de6af088e03d07bb45977e5abf00130436fc05c1fbaa070253741aead1567f"
+  },
+  {
+    "file": "logs/solar-v5-neural.log",
+    "bytes": 4938,
+    "sha256": "3ae3195f64090a977c5891bbdf156e6b8cf04b930eb88b9a15e1a257e6b9b6b6"
+  },
+  {
+    "file": "logs/solar-v5-package.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "logs/solar-v5-pipeline.log",
+    "bytes": 848,
+    "sha256": "a3bd04eec0602766665190e17c3b449ca9dfecefaf68f6a8ec6845ad44096b90"
+  },
+  {
+    "file": "logs/solar-v5-report.log",
+    "bytes": 1921,
+    "sha256": "f1bd08109b42fb9c6c861eec2a93dea7eea2eb2facd81ac029530869b2dcbe88"
+  },
+  {
+    "file": "logs/solar-v5-rf-refinement.log",
+    "bytes": 1182,
+    "sha256": "8d47e117d5f78ca0794bd8b760458aeb0e7b2aec0ddb2ce57c78535c0e5d218d"
+  },
+  {
+    "file": "logs/solar-v5-rf-tune.log",
+    "bytes": 855,
+    "sha256": "4dcb6dab073f8ca214163f4d7a283dd081b6f93fdb8f26c948634e2a299a39d9"
+  },
+  {
+    "file": "logs/solar-v5-rf.log",
+    "bytes": 6200,
+    "sha256": "38266a934d6971a63026c8ea49aca123864c5b90d550337c78c3287b92dc733f"
+  },
+  {
+    "file": "logs/solar-v5-unet300-tune.log",
+    "bytes": 1134,
+    "sha256": "5dcad677f0c9edae4454cd6166f6dbb45c476ce1028530226ce24e630a5ae136"
+  },
+  {
+    "file": "logs/solar-v5-unet600-tune.log",
+    "bytes": 1137,
+    "sha256": "d85a0eefa3f4bd83ffed8ccdaa2c09f06ea37c0f9464196497a6b9f3a3b308c9"
+  },
+  {
+    "file": "logs/solar-v5-unet900-tune.log",
+    "bytes": 1136,
+    "sha256": "acf13dc3f8cb7859c746b8be50672fc6da7674078adf1b104eac85487560c74b"
+  },
+  {
+    "file": "model-selection-followup.json",
+    "bytes": 321,
+    "sha256": "d7eb7670827ac0aa73c9a89958ded0ce6b058645b77788751c1aabc485d1f715"
+  },
+  {
+    "file": "neural-loss.json",
+    "bytes": 3472,
+    "sha256": "92edf64ced10e063604c6284233c34bfbbf4cae8c7f24594833da514305bbc4a"
+  },
+  {
+    "file": "neural-selected.json",
+    "bytes": 266,
+    "sha256": "37228c30d69bb46f92bd1485ecaea65072253140a1e12c27f51b92a288dd3928"
+  },
+  {
+    "file": "neural-training.json",
+    "bytes": 357,
+    "sha256": "727adf82168380743b0fe58b3b691cbf88bec5e18d6babca7a9eebee530389f1"
+  },
+  {
+    "file": "neural.py",
+    "bytes": 4718,
+    "sha256": "3969e61867af72cafd739c89c46a6f2671d94f02ef16c5dc0edd297ff2bf3e31"
+  },
+  {
+    "file": "performance-amendment.json",
+    "bytes": 437,
+    "sha256": "0c745e17b40a3b960b8c7aaa4d1953eda5f3b157cbfa9579e75f51e3c65036ca"
+  },
+  {
+    "file": "pixel-forest.joblib",
+    "bytes": 38878762,
+    "sha256": "32c42716bcf2c10828ec52ecb4ee50e2c758ad24d77c107213669188f85d083d"
+  },
+  {
+    "file": "porownanie-masek.png",
+    "bytes": 442582,
+    "sha256": "63055a3ebed6ad692d39bfc8db6568b161517e3fa4e0bc2f3b9ce0c46803e9bf"
+  },
+  {
+    "file": "porownanie-wynikow.png",
+    "bytes": 66022,
+    "sha256": "c1d212d6cc9554d49a55b8cd19053fa09d5c62d11e8fa5d4bd18acbfde6a070f"
+  },
+  {
+    "file": "protocol-amendment.json",
+    "bytes": 377,
+    "sha256": "9dd2c6f4fd122f756f5747b14749cc4142dc95c6608ce4b32bbd39f82000e0f7"
+  },
+  {
+    "file": "protocol-cache-fix.json",
+    "bytes": 12456,
+    "sha256": "8a4c10eb8929d45ebf273a2512019a8d99c9d206535df67f884ac6ac9f0d02cf"
+  },
+  {
+    "file": "protocol-initial.json",
+    "bytes": 12207,
+    "sha256": "a8d7ddeb357e949b851ee3670bda3c285cb725e3b4f1cba2f5a10b26b8f27f39"
+  },
+  {
+    "file": "protocol.json",
+    "bytes": 12712,
+    "sha256": "ac39dee69b27de3b9162b2e8c48917f61e9b126447779b6594f547b8013a7520"
+  },
+  {
+    "file": "rebuild_baseline_cache.py",
+    "bytes": 411,
+    "sha256": "173829e8cfd4d4429e5f6910c7cbd6e5cc005439dd3446ec5db26858e3fc66d0"
+  },
+  {
+    "file": "REPRODUCE.txt",
+    "bytes": 4183,
+    "sha256": "b018a02215ec59382c1f9b5223e1438893b68a580b5dfb687cc5d11222bbdab3"
+  },
+  {
+    "file": "requirements-extra.txt",
+    "bytes": 212,
+    "sha256": "fe12f4c8d0fc70f9b3c7477abe5bfd2764bb514dc6af7b4e5856e352e190f78a"
+  },
+  {
+    "file": "research.py",
+    "bytes": 13109,
+    "sha256": "284ca8e21360d8e357a5dd34cd62f64261edabcd7495bf9982aa21c7fb2e0ee2"
+  },
+  {
+    "file": "rf-feature-importance.json",
+    "bytes": 2792,
+    "sha256": "f1550b4637b252004876063ef51f332db1e22ffb7375949bf10dc2814f58ba9d"
+  },
+  {
+    "file": "rf-frozen-initial.json",
+    "bytes": 557,
+    "sha256": "4dfd2623734312f7407661515f8433ed0576563fb55c6385eab91a67e8b825cd"
+  },
+  {
+    "file": "rf-frozen.json",
+    "bytes": 557,
+    "sha256": "4dfd2623734312f7407661515f8433ed0576563fb55c6385eab91a67e8b825cd"
+  },
+  {
+    "file": "rf-refinement-protocol.json",
+    "bytes": 2949,
+    "sha256": "c56424a31e5c3650e8d945e07a7a615397f4a4251572ff702c96c1d129af72a8"
+  },
+  {
+    "file": "rf-refinement.json",
+    "bytes": 32050,
+    "sha256": "120255fb61c6604edf10c2566241feec33fd004b5af37684685f9c987fe7f5c7"
+  },
+  {
+    "file": "rf-training.json",
+    "bytes": 23821,
+    "sha256": "e960aeb7e69b5fe2170dc54a24896d1e768a741cbb1383b0bf2cd2dfb12cdd01"
+  },
+  {
+    "file": "rf-tuning.json",
+    "bytes": 31498,
+    "sha256": "41a38477d0505aafe80abc098060ad9e9c8ab6bfedb4cb8a33c1d1e6b8630f4b"
+  },
+  {
+    "file": "rf_refinement.py",
+    "bytes": 1771,
+    "sha256": "fe2d591e60234a09df6cc4c8fa763f6e3197a5c4f518cce2c620ef0a19466631"
+  },
+  {
+    "file": "run_component_remaining.py",
+    "bytes": 1884,
+    "sha256": "ed39e61beaeb126713088db567693a4aa27646cadfeb40fb0d4e79f4dad78788"
+  },
+  {
+    "file": "run_remaining.py",
+    "bytes": 1439,
+    "sha256": "d324b45650ba2d231646654dd4dedf6a79ea14af47e952959c0ab355fcf6492d"
+  },
+  {
+    "file": "selected-local-model.json",
+    "bytes": 310,
+    "sha256": "a1dc2ed0ac70ccba234d5cad874b22fa03c74d08003f8236355ec2f1ed44a617"
+  },
+  {
+    "file": "selection-followup-protocol.json",
+    "bytes": 479,
+    "sha256": "fac2aff2a22ccc64ac4c16499a11f170721a614b917beb78a08006b79add7e7a"
+  },
+  {
+    "file": "source-snapshots/research-cache-fix.py",
+    "bytes": 12270,
+    "sha256": "48d39bcac6d488c15e37ebb8041c322bcd8b82e893998840c093fc21a303adf5"
+  },
+  {
+    "file": "source-snapshots/research-training.py",
+    "bytes": 12069,
+    "sha256": "397185aeca4844b225b076feeaf077594cc3fdddb370f69890a96fad119d18b0"
+  },
+  {
+    "file": "SOURCES.txt",
+    "bytes": 1553,
+    "sha256": "ced4bb36d51856233872893c154730eeab07a608f83e367194ef804c40b0bb7d"
+  },
+  {
+    "file": "test_research.py",
+    "bytes": 3971,
+    "sha256": "bc9d05314c7bdfad28f4acce82647133b7f8e7637e984dcddce082c45c37f08e"
+  },
+  {
+    "file": "tests.txt",
+    "bytes": 682,
+    "sha256": "883ca11866b9cd2ced9f787fcb226388d1f07a920f1d798be7dd026b812f28ee"
+  },
+  {
+    "file": "training-target-check.png",
+    "bytes": 402246,
+    "sha256": "8e6d398575f7271d5508464b8008bf1c95ba7e9086265a1b5047032508d13233"
+  },
+  {
+    "file": "unet300-frozen.json",
+    "bytes": 561,
+    "sha256": "41205de6a6363392264ba7988e61a0b34a04806ae74c74f42fc6c30e2c53a626"
+  },
+  {
+    "file": "unet300-tuning.json",
+    "bytes": 31447,
+    "sha256": "2a3913c04a3d501cbd715d31e9e6cf1c55d4ae0cff351d875a5271aee8858068"
+  },
+  {
+    "file": "unet300.pt",
+    "bytes": 1113055,
+    "sha256": "94f695f25bcd1727129216cd49fcff45f74991199448c143055e7ff3712e624d"
+  },
+  {
+    "file": "unet600-frozen.json",
+    "bytes": 565,
+    "sha256": "a752b76580f494e10d653aa6d0b98a304e91f41a6c781b263bc7c8b25b23cdf2"
+  },
+  {
+    "file": "unet600-tuning.json",
+    "bytes": 31559,
+    "sha256": "38115427eab141a285b69371783c0368fc2716acb8dd6b00df04e531daa0761c"
+  },
+  {
+    "file": "unet600.pt",
+    "bytes": 1113055,
+    "sha256": "c599c60bb70dd823370115ba304e6bec622f212e6d02bae0a77ff95915316bdc"
+  },
+  {
+    "file": "unet900-frozen.json",
+    "bytes": 563,
+    "sha256": "f7fcf63e3d724c54a27bf58ab9beea6bd380271e2962bcb1f6cc69366311cfea"
+  },
+  {
+    "file": "unet900-tuning.json",
+    "bytes": 31629,
+    "sha256": "40d64cb2ab4e840ba9c2fd4deea93b1e97424c2493a4c0cb010584fad9f74421"
+  },
+  {
+    "file": "unet900.pt",
+    "bytes": 1113055,
+    "sha256": "94480bbbbdacc9891bd68d81692bb89265e9a0e529c48515a5e4c762b71701cc"
+  },
+  {
+    "file": "v3-tune-reference.json",
+    "bytes": 155,
+    "sha256": "06dcce7974d492805b85ef46b9baed4c88afa4b5d4afb4acb1f0880244b56ef7"
+  },
+  {
+    "file": "Wyniki-Solar.txt",
+    "bytes": 1975,
+    "sha256": "da0cd4963cd77cc3223d15a71fc727f29492bcfe51cd191c657b6cc733fd4e33"
+  }
+]

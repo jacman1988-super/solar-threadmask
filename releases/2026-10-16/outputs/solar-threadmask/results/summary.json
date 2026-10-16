@@ -1,0 +1,31 @@
+{
+  "kind": "measured_local_baseline",
+  "mean_observation_pq": 0.01091493342835829,
+  "date_cluster_bootstrap_95_interval": [
+    0.008896219335576536,
+    0.013011400075309591
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261014,
+  "holdout_observations": 135,
+  "holdout_days": 129,
+  "annotation_sets": 229,
+  "test_images": 180,
+  "prediction_rows": 21275,
+  "zero_prediction_images": [],
+  "holdout_images_with_zero_pq": 49,
+  "inference_seconds_median": 2.806462800002919,
+  "inference_seconds_sum": 396.4965526000087,
+  "timing_caveat": "Recorded while validation and prediction processes shared CPU; not isolated benchmark.",
+  "metric_parity": "Organizer implementation parity remains unverified.",
+  "leaderboard_score": null,
+  "submitted": false,
+  "prediction_source_sha256": {
+    "pipeline.py": "325d49b42669cfa782cb5ad55ee29aa802f7e1eb8c30e574eb61cbf805c433f2",
+    "threadmask.py": "05fc2f34e74cdac88d9f21108f96b54aaca745db88597c330935227aeae60b0a"
+  },
+  "validation_source_sha256": {
+    "pipeline.py": "e1a1e764fde8ad3f4c5f966c11ab8b14e307a5300fa0c0201d0376ec1f4b83d8",
+    "threadmask.py": "05fc2f34e74cdac88d9f21108f96b54aaca745db88597c330935227aeae60b0a"
+  }
+}

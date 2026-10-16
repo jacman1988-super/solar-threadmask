@@ -1,0 +1,10 @@
+Reference scoring functions are extracted from:
+Azim Ahmadzadeh, Self_Evaluation_Notebook, version 6 (kernel version 341270459).
+https://www.kaggle.com/code/azimahmadzadeh/self-evaluation-notebook
+The notebook displayed the Apache License 2.0. Retrieved 14 October 2026.
+
+Only fp_count_hit, fn_count_hit and get_pq_score are included. Their bodies are
+unchanged; a source header and deferred-annotations directive were added.
+The NumPy adapter is a separate original compatibility layer for parity tests.
+No affiliation, endorsement or private scoring access is implied.
+License: https://www.apache.org/licenses/LICENSE-2.0

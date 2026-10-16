@@ -1,0 +1,35 @@
+{
+  "baseline_pq_same_blind": 0.01094720011669448,
+  "v2_pq": 0.09916782852041138,
+  "v2_95_date_cluster_interval": [
+    0.08506640185291878,
+    0.11283679680492227
+  ],
+  "paired_improvement_95_interval": [
+    0.075142003565564,
+    0.10051508671822887
+  ],
+  "blind_observations": 100,
+  "blind_days": 96,
+  "v2_median_seconds": 0.45033335000152874,
+  "baseline_median_seconds": 0.5424436499997682,
+  "test_images": 180,
+  "predicted_instances": 3482,
+  "zero_prediction_images": [
+    "20180507140210Th"
+  ],
+  "configuration": {
+    "resolution": 1024,
+    "sigma": 24.0,
+    "low": 0.09,
+    "high_ratio": 1.5,
+    "min_area": 60,
+    "limb_margin": 24,
+    "close_iterations": 1
+  },
+  "leaderboard_score": null,
+  "submitted": false,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261014,
+  "metric": "Local diagnostic PQ, organizer parity not established"
+}

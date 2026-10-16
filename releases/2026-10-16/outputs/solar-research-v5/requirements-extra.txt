@@ -1,0 +1,6 @@
+scikit-learn==1.7.2
+joblib==1.5.2
+threadpoolctl==3.6.0
+torch==2.14.1+cpu
+# Also install the existing solar-threadmask/requirements.txt dependencies.
+# CPU torch distribution: https://download.pytorch.org/whl/cpu

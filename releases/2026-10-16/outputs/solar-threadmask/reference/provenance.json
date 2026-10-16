@@ -1,0 +1,9 @@
+{
+  "source": "https://www.kaggle.com/code/azimahmadzadeh/self-evaluation-notebook",
+  "version": 6,
+  "kernel_version_id": 341270459,
+  "retrieved_date": "2026-10-14",
+  "license_displayed": "Apache 2.0",
+  "rendered_source_sha256": "b9ca7dc42a7bb71e34a923f328b3ce6eb682407407080e7f66691b5ebdcd15de",
+  "modifications": "Three functions extracted unchanged; future annotations header added. NumPy adapter used only in tests, not Torch execution."
+}

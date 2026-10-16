@@ -1,0 +1,15 @@
+{
+  "protocol_sha256": "a8d7ddeb357e949b851ee3670bda3c285cb725e3b4f1cba2f5a10b26b8f27f39",
+  "source_sha256": "3969e61867af72cafd739c89c46a6f2671d94f02ef16c5dc0edd297ff2bf3e31",
+  "torch": "2.14.1+cpu",
+  "parameters": 274849,
+  "steps": 900,
+  "batch": 6,
+  "patch": 192,
+  "seed": 20261015,
+  "checkpoints": [
+    300,
+    600,
+    900
+  ]
+}

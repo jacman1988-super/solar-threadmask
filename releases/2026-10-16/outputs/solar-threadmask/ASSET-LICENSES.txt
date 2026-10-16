@@ -1,0 +1,26 @@
+Code: Apache 2.0; see LICENSE.txt.
+
+Three public scoring-function excerpts in reference/ are from Azim Ahmadzadeh's
+Kaggle Self_Evaluation_Notebook v6, displayed under Apache 2.0. See reference/NOTICE.txt
+and provenance.json. The organizer template preamble in report/ is retained for
+this competition; consult its source and ACM rules for other uses. It is not
+represented as original ThreadMask code.
+
+Competition images and annotations are separate from the source code license.
+Kaggle lists the competition dataset under CC BY-NC 4.0.
+Source: https://www.kaggle.com/competitions/filament-segmentation-2026/data
+MAGFiLO paper: https://doi.org/10.1038/s41597-024-03876-y
+Observations: NSO/GONG. Dataset: MAGFiLO.
+
+The accompanying Solar-real-validation-preview.png and Solar-v2-preview.png are derivative visualizations
+of three competition observations with resized images and colored contours added.
+Its underlying observations and annotations retain their separate CC BY-NC 4.0
+terms. Do not assume the code's Apache license applies to the preview.
+Original competition data is not included in the source archive.
+
+V3: Solar-v3-preview.png and report/segmentation-v3-preview.png use the first three
+new holdout observations, NSO/GONG and MAGFiLO, with resized images and colored
+contours. They retain separate CC BY-NC 4.0 dataset terms. The v3 model parameters,
+annotation-derived statistics and result artifacts are separately marked data-derived;
+do not assume the code's Apache license applies to them. No source observation
+archive is included. Review dataset terms before any public distribution.

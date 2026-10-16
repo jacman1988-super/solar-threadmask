@@ -1,0 +1,9 @@
+...........                                                              [100%]
+============================== warnings summary ===============================
+outputs/solar-research-v5/test_research.py: 336 warnings
+  C:\Users\adame\Documents\Codex\2026-10-14\referenced-chatgpt-conversation-this-is-an\work\solar-ml-packages\joblib\numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+  As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+    array.shape = self.shape
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+11 passed, 336 warnings in 10.58s

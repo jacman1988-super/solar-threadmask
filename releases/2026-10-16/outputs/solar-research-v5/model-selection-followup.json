@@ -1,0 +1,11 @@
+{
+  "method": "rf_filter",
+  "same_validation_pq": {
+    "rf": 0.24118636409351113,
+    "unet900": 0.21232820245763456,
+    "rf_filter": 0.2632907098868555
+  },
+  "images": 19,
+  "rule": "Frozen in selection-followup-protocol.json; assessment not consulted",
+  "assessment_results_present_at_selection": false
+}

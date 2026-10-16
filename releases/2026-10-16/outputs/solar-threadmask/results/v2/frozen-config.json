@@ -1,0 +1,9 @@
+{
+  "resolution": 1024,
+  "sigma": 24.0,
+  "low": 0.09,
+  "high_ratio": 1.5,
+  "min_area": 60,
+  "limb_margin": 24,
+  "close_iterations": 1
+}

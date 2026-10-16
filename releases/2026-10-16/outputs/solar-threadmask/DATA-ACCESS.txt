@@ -1,0 +1,18 @@
+Official data source:
+https://www.kaggle.com/competitions/filament-segmentation-2026/data
+
+Use your own authorized Kaggle download after required account/rule approval.
+The project does not accept terms or download gated data automatically.
+Expected source archive: filament-segmentation-2026.zip
+SHA-256: 56d8cd2927859fa7df72bd28ad1586f53c5814df6f81db02e755223e430657df
+Extracted data root: MAGFiLO_1.0_Kaggle_2026
+  train/train_images/*.jpeg
+  train/MAGFiLO_1.0_Annotations_kaggle2026_train.json
+  test/test_images/*.jpeg
+707 training observations, 180 unlabeled test observations.
+Data terms are separate CC BY-NC 4.0; see ASSET-LICENSES.txt.
+
+Inference uses images and the included trained model only. Reproduction of
+training/evaluation additionally needs the authorized annotation file. Test
+annotations are never required or used. No credentials or complete data archive
+are included in this release package.

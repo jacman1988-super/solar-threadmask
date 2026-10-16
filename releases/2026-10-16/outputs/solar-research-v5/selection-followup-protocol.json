@@ -1,0 +1,5 @@
+{
+  "rule": "Select among RF, best CNN snapshot (chosen on original 55 tune images), and RF plus component filter, by PQ on the same component validation subset. Tie favors RF then CNN then component filter. No assessment metrics used.",
+  "limitation": "Development subset reused after initial parameter search; not an independent validation set. Component filter is trained on the complementary portion of the former tune set.",
+  "frozen_before_assessment_results": true
+}

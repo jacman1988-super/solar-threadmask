@@ -1,0 +1,12 @@
+{
+  "method": "rf_filter",
+  "selection": "Highest tune PQ, before consulting assessment",
+  "local_assessment_pq": 0.2714848327928843,
+  "gain_vs_v3": 0.11021473685353347,
+  "paired_gain_interval": [
+    0.08245445044784268,
+    0.13790460889165823
+  ],
+  "published": false,
+  "submitted": false
+}

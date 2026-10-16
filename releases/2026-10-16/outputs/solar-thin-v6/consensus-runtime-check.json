@@ -1,0 +1,9 @@
+{
+  "file": "20150207084414Th.jpeg",
+  "baseline_instances": 7,
+  "consensus_instances": 8,
+  "exact_research_match": true,
+  "baseline_masks_unchanged": true,
+  "annotations_and_image_cache_forbidden": true,
+  "labels_sha256": "e48568457b3b1948a686d0061ae2b779cb0da326a31f03f4564e0e4a204707ae"
+}

@@ -1,0 +1,19 @@
+THREADMASK V3
+
+Frozen v2 masks at 1024 processing resolution; sigma 24, low contrast .09,
+strong ratio 1.5, min area 60, disk margin 24, closing one. Infer disk from image.
+Extract eleven component shape, contrast and interior-distance features. Standardize
+using training rows. Logistic mean loss with fixed L2=.01, unpenalized intercept,
+5575 per-annotator rows (657 positives). A positive means any annotator GT IoU>.5.
+Retain sigmoid scores >= .15, selected from 12 fixed thresholds on tuning data.
+No change to retained shapes; output labels preserve instance pixels exactly.
+
+The new split excludes every previously used date. Train 170, tune 55, assessment
+106, unused 106. All observing dates stay together. Assessment opened after fitting
+and threshold freeze. Public-v6 pooled arithmetic, 165 annotator-image entries,
+exact agreement with unchanged pure reference functions through a NumPy adapter.
+No Torch/private scorer or leaderboard was run. See JSONs for unrounded numbers.
+
+False positives decline but false negatives rise. Learned retention cannot recover
+missed candidates. This is an original implementation of established techniques,
+not a claim of a novel segmentation algorithm or competition-winning performance.

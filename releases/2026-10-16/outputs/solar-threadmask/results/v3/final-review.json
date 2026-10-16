@@ -1,0 +1,12 @@
+{
+  "decoded_instances": 950,
+  "images": 180,
+  "zero_detection_images": 11,
+  "overlapping_instance_pairs": 0,
+  "source_input_hashes_checked": 180,
+  "csv_sha256": "2a58ee67e8beaa23187921d03bd7f2222db5c747ca8bfd3e7db0a9852f7a2f56",
+  "submitted": false,
+  "private_validator_tested": false,
+  "archive_reproduction_sha256": "2a58ee67e8beaa23187921d03bd7f2222db5c747ca8bfd3e7db0a9852f7a2f56",
+  "archive_reproduction_identical": true
+}

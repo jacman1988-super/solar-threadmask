@@ -1,0 +1,20 @@
+Solar — pełna rozdzielczość i cechy cienkich grzbietów, 16.10.2026
+Autor: Jacek Adamek
+
+Wariant spełnił lokalne kryterium: więcej cienkich trafień bez dodatkowych FP i bez spadku ogólnego TP/PQ. Nie stanowi to niezależnego potwierdzenia generalizacji.
+
+Dotychczasowy RF z filtrem: PQ 0.271485; TP 445, FP 550, FN 682; cienkie trafienia 82/314 (26.11%).
+
+Nowa korekta pełnej rozdzielczości: PQ 0.272835; TP 447, FP 548, FN 680; cienkie trafienia 83/314 (26.43%).
+
+95% opisowy bootstrap po 95 datach: zmiana PQ [-0.001377, +0.004161], zmiana czułości cienkich [-0.69, +1.43] pkt proc. Przedział nie usuwa obciążenia po wielokrotnym doborze hipotez i używaniu danych.
+
+Inne podejście: osobny model pikselowy ExtraTrees, 10 cech obrazu w oryginalnym 2048x2048, w tym dodatnia odpowiedź grzbietów z hesjanu przy trzech skalach. Uczenie na 60 deterministycznie wybranych zdjęciach z pierwotnej puli treningowej, 335163 próbkach; nadpróbkowanie cienkich masek wyłącznie w uczeniu. Cel: średni głos autorów masek segmentacyjnych, bez pozostałych metadanych adnotacji.
+
+Dobór: 27 konfiguracji na 19 zdjęciach strojenia. Przed oceną zamrożono szerokość <=16 pikseli, próg nowego modelu 0.2, brak wzrostu poza istniejącą maskę (promień 0). Na strojeniu cienkie trafienia 15/49 ->16/49, łącznie TP83 i FP121 bez zmian, PQ 0.263291 ->0.263770.
+
+Nowy model koryguje obrysy istniejących instancji. Nie tworzy nowych identyfikatorów. Ochrona powierzchni zachowuje maskę, jeżeli korekta usunęłaby ponad 75% obiektu, zostawiła mniej niż 8 pikseli lub ponad dwukrotnie go powiększyła. To różni się od wcześniejszego dodawania odłączonych propozycji i geometrycznej erozji.
+
+Weryfikacja: testy odpowiedzi na ciemną linię w trzech szerokościach oraz ochrony instancji. Rzeczywista inferencja jest dokładnie zgodna z obliczeniem badawczym po zablokowaniu dostępu do adnotacji i pamięci map prawdopodobieństw. Diagnostyczna pamięć float16 nie służy do oceniania ani inferencji; obliczenia prawdopodobieństw są float32.
+
+Ograniczenia: 106 zdjęć z 95 dat oceniano już wcześniej; to rozwój na znanych danych, nie niezależny ślepy test. Cienki obiekt jest zdefiniowany geometrycznie jak wcześniej (2*powierzchnia/piksele granicy <=8 i rozpiętość >=40 przy 2048), tylko na potrzeby oceny. To wynik lokalnego publicznego skryptu, nie nowy wynik Kaggle. Model domyślny, poprzednie wyniki i zgłoszone CSV pozostały bez zmian. Niczego nie opublikowano ani nie wysłano.

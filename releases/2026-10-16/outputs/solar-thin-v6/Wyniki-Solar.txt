@@ -1,0 +1,46 @@
+Solar — końcowy wynik lokalnych prób, 16.10.2026
+Autor: Jacek Adamek
+
+Nie uzyskano jednoczesnej poprawy lokalnego PQ i czułości cienkich obiektów. Zachowano dotychczasowy model jako domyślny.
+
+Dotychczasowy model: PQ 0.271485; TP 445, FP 550, FN 682; cienkie wykryte 82/314 (26.11%).
+
+Cienkie propozycje z potwierdzeniem RF >= 0.6: PQ 0.271069; TP 446, FP 557, FN 681; cienkie wykryte 83/314 (26.43%).
+
+95% bootstrap po datach: zmiana PQ [-0.001349, +0.000341]; zmiana czułości cienkich [+0.00, +1.10] pkt proc.
+
+Wariant trzeci dodaje wyłącznie odłączone, cienkie propozycje U-Net z progiem 0.7, wydłużeniem >=2 i szerokością <=4 piksele przy 1024. Średnie wsparcie RF musi wynosić >=0.6. Próg wsparcia wybrano spośród siedmiu wartości na 19 zdjęciach strojenia, przed trzecią oceną na 106 zdjęciach.
+
+To trzecia hipoteza rozwojowa, podjęta po poznaniu zbiorczych wyników drugiej. Dane oceny były używane wcześniej. Wzrost na tych danych nie jest niezależnym potwierdzeniem skuteczności ani nowym wynikiem Kaggle. Nie zmieniono domyślnego modelu, opublikowanych plików ani zgłoszenia. Nowa funkcja inferencji jest oddzielnie dostępna w consensus_runtime.py.
+
+Historia pierwszych dwóch hipotez i definicja cienkiego obiektu:
+
+Solar — cienkie filamenty, 16.10.2026
+Autor: Jacek Adamek
+
+Ocena lokalna: 106 zdjęć, 95 dat, osobne maski każdego autora adnotacji.
+
+Dotychczasowy RF z filtrem:
+PQ 0.271485
+TP 445, FP 550, FN 682
+Czułość ogółem 39.49%
+Cienkie obiekty: 82/314, czułość 26.11%
+
+RF + cienkie propozycje U-Net:
+PQ 0.269928
+TP 446, FP 566, FN 681
+Czułość ogółem 39.57%
+Cienkie obiekty: 83/314, czułość 26.43%
+
+Zmiana PQ: -0.001556. Zmiana czułości dla cienkich obiektów: +0.32 pkt proc.
+95% przedział bootstrap po datach: PQ [-0.003481, -0.000206], cienkie [+0.00, +1.10] pkt proc. To opis niepewności na używanym wcześniej zbiorze, nie korekta obciążenia selekcji.
+
+Metoda: U-Net900, próg 0.7, wydłużenie >=2, przybliżona szerokość <=4 piksele w 1024. Propozycje muszą być odłączone od dotychczasowych masek i ich marginesu 2 pikseli. Parametry wybrane na 19 zdjęciach przed tą oceną. Maski bazowe pozostają identyczne.
+
+Pierwsza hipoteza (histereza oraz trzy nowe filtry jakości) nie spełniła kryteriów na zbiorze strojenia. Zachowano wszystkie 21 prób; brak zastąpienia bazowego modelu tym wariantem. Druga hipoteza ma 18 ustawień sprawdzonych na tym samym zbiorze strojenia. Wynik dodatni na strojeniu: PQ 0.263291 -> 0.265266; cienkie 15/49 -> 16/49.
+
+Definicja cienkiego obiektu: 2*powierzchnia/liczba pikseli wewnętrznej granicy <=8 oraz dłuższy rozmiar ramki >=40 przy 2048. To geometryczne przybliżenie użyte wyłącznie do oceny na maskach segmentacyjnych, nie wejście modelu.
+
+Ograniczenia: dane oceny były wcześniej oglądane, a hipotezy korzystają wielokrotnie z tego samego strojenia. Wyniki rozwojowe, bez niezależnego testu. PQ jest metryką publicznego skryptu organizatora, nie nowym wynikiem Kaggle. Nie zmieniono CSV zgłoszenia ani nie wykonano publikacji.
+
+Wdrożenie lokalne: wariant pozostaje eksperymentalny; zachowaj obecny RF jako domyślny z powodu kompromisu jakości.

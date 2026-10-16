@@ -1,0 +1,6 @@
+{
+  "thin_missed": 232,
+  "recoverable_any_unet": 17,
+  "recoverable_disjoint_thin_candidate": 1,
+  "recoverable_excluded_by_candidate_rules": 16
+}

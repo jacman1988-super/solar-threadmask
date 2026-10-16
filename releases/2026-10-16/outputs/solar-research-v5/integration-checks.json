@@ -1,0 +1,12 @@
+{
+  "image_only_matches_evaluated_pipeline": true,
+  "file": "20110621063134Lh.jpeg",
+  "instances": 8,
+  "label_array_sha256": "a0e8e9a97c3793ce42b8ee2a14fca9b85fb262d471be0c6830681d74b09b1db9",
+  "new_source_matches_protocol": true,
+  "neural_source_matches_training": true,
+  "rf_training_protocol_available": true,
+  "neural_training_protocol_available": true,
+  "submitted_v3_csv_unchanged": true,
+  "component_source_matches_frozen_protocol": true
+}

@@ -1,0 +1,13 @@
+/work/
+/weights/
+/.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.joblib
+*.pt
+*.gguf
+*.jpeg
+*.jpg
+*.png
+*.csv

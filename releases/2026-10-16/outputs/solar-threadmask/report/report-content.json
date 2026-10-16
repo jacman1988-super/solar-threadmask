@@ -1,0 +1,178 @@
+[
+  [
+    "head",
+    "Abstract"
+  ],
+  [
+    "body",
+    "This report describes our solution to the Solar Filament Segmentation Challenge 2026, a Kaggle competition on automatic segmentation of solar filaments in GONG H-alpha observations. ThreadMask is a reproducible, non-neural CPU baseline using disk-aware background normalization, relative dark contrast and seeded connected components. A 24-configuration development search is followed by a frozen comparison on 100 observations from 96 other dates. No test labels, pretrained weights, paid inference or leaderboard feedback are used."
+  ],
+  [
+    "body",
+    "Using the public self-evaluation notebook v6 pooling convention, PQ increases from 0.00979 to 0.09749; the latter has a date-cluster bootstrap 95% interval of [0.08531, 0.11024]. These are local validation results, not a Kaggle leaderboard score. We document a material difference between this convention and an earlier image-averaged diagnostic, and retain all earlier outputs. The method remains a baseline with missed filaments and residual limb artifacts."
+  ],
+  [
+    "head",
+    "1 Introduction"
+  ],
+  [
+    "body",
+    "This report goes over the details of our submitted solution to the Solar Filament Segmentation Challenge 2026 [1]. The challenge, launched on July 10, 2026, is organized by the Earth-Space AI Research (ESAIR) Lab (www.esairlab.com/home). This challenge utilizes the MAGFiLO dataset for evaluation of the segmentation algorithms [2]."
+  ],
+  [
+    "small",
+    "The preceding introduction retains the template wording. No solution has actually been submitted: this document is a local review draft. Our contribution is an independently implemented, inspectable baseline and an auditable evaluation workflow, not a claim that Gaussian filtering, morphology or connected components are new algorithms."
+  ],
+  [
+    "head",
+    "2 Methodology"
+  ],
+  [
+    "body",
+    "The pipeline accepts only grayscale 2048x2048 competition JPEGs. At 1024x1024, it thresholds intensity at 22% of the 90th percentile, keeps the largest connected bright region and fills its holes to estimate the disk. A Euclidean-distance margin removes pixels within 24 processing pixels of its boundary. Off-center observations are therefore handled without assuming a centered circle."
+  ],
+  [
+    "body",
+    "Let I be intensity and D the binary disk. Background is G_sigma(I D) / max(G_sigma(D), 0.0001), where G is Gaussian smoothing [4]. Relative darkness is (background - I) / max(background, 1). Dividing by disk occupancy limits contamination from black pixels outside the Sun. One binary-closing step fills small candidate gaps [5]."
+  ],
+  [
+    "body",
+    "Eight-connected low-threshold components are retained only if they contain a stronger seed, meet a minimum area and cover no more than 3% of the usable disk. Instance labels are enlarged to 2048x2048 with nearest-neighbor interpolation. Compressed COCO masks are decoded and checked against exact label membership before export."
+  ],
+  [
+    "small",
+    "Figure 1. End-to-end pipeline. All operations are CPU based; no model training is required."
+  ],
+  [
+    "head",
+    "3 Evaluation"
+  ],
+  [
+    "body",
+    "The authorized archive contains 707 training observations, 180 test observations, 1154 annotator-image entries and 8199 annotations. Archive CRC, input hashes and train/test filename separation were checked. Multiple annotators for one observation remain in the same date group. Only segmentation polygons are used for validation; no spine or other ground-truth metadata is supplied to inference."
+  ],
+  [
+    "body",
+    "The earlier 135-image assessment informed the redesign and is not treated as blind again. From the remaining development dates, a stored SHA-256 ordering reserves 96 dates (100 images) for the v2 comparison and uses the next 32 dates (35 images) for tuning. The grid varies sigma {12,24,48}, low threshold {0.025,0.04,0.06,0.09} and minimum area {20,60}. All 24 trials are retained. Selection used the earlier diagnostic on development data only; the configuration was frozen before new outcomes were inspected."
+  ],
+  [
+    "body",
+    "One reserved image was previously processed solely to test RLE encoding equivalence, without evaluating its annotations or segmentation quality. Solar features can persist across days; grouping by date does not eliminate all temporal dependence. Once inspected, this comparison set must not be reused as a blind set for later model selection."
+  ],
+  [
+    "head",
+    "3.1 Public metric audit"
+  ],
+  [
+    "body",
+    "Notebook v6 [3] counts every GT/prediction pair with IoU strictly greater than 0.5. Unmatched columns are false positives and unmatched rows are false negatives. Counts and TP IoUs are pooled across annotator-image entries before PQ is calculated. The previous diagnostic instead applied one-to-one matching and averaged scores within observations. Those numbers answer different questions."
+  ],
+  [
+    "small",
+    "The CPU implementation is checked against three unchanged pure reference functions extracted from v6. A NumPy adapter supplies the tensor sum interface; Torch itself and the private scoring service were not executed. Random matrices, threshold/empty/multiple-hit cases and a dense-mask versus compressed-RLE overlap test pass. On all real overlap matrices below, reference-score absolute difference is zero."
+  ],
+  [
+    "head",
+    "3.2 Measured comparison"
+  ],
+  [
+    "small",
+    "Table 1. Same 100 observations and 181 annotator-image entries for both methods. Counts repeat an observation when it has multiple annotators, following the public notebook. Overlap-degree diagnostics use IoU > 0, not the TP threshold, and are not themselves proof of physical fragmentation."
+  ],
+  [
+    "body",
+    "The v2 95% PQ interval is [0.08531, 0.11024]. The paired improvement interval is [0.07657, 0.09946]. Both use 2000 bootstrap resamples of observing days, seed 20261014, pooling all entries in each resample. They quantify variation over these dates, not uncertainty in an unseen leaderboard score."
+  ],
+  [
+    "body",
+    "The larger gain comes with substantial remaining errors: v2 still has many false positives and misses. The first three filenames in the reserved set are shown on the next page without score-based selection. Bright-region artifacts, incomplete thin filaments and detections near the disk boundary remain visible."
+  ],
+  [
+    "head",
+    "3.3 Test-set artifact"
+  ],
+  [
+    "body",
+    "The frozen v2 method processed all 180 unlabeled test images and produced 3482 instance rows. One observation, 20180507140210Th, has no detections and therefore no CSV row. It is retained explicitly in the audit. Its organizer-accepted representation must be resolved before submission; the current CSV is a local candidate. No labels or leaderboard queries were used to choose predictions."
+  ],
+  [
+    "small",
+    "Fifteen implementation tests passed before the metric audit; the five new scorer tests bring the suite to 20. Tests establish specific implementation properties, not scientific novelty or competition readiness. The known pycocotools/NumPy deprecation warning remains recorded; mask round-trip checks passed."
+  ],
+  [
+    "head",
+    "4 Qualitative comparison and limitations"
+  ],
+  [
+    "small",
+    "Figure 2. First three reserved filenames: cyan is one annotator, orange is v1 and green is v2. Reduced rim artifacts do not mean complete limb rejection. Thin structures can be missed, closing can merge neighbors, and downsampling can lose fine detail. NSO/GONG and MAGFiLO observations, CC BY-NC 4.0; resized and colored contours added."
+  ],
+  [
+    "head",
+    "5 Reproducibility and release status"
+  ],
+  [
+    "body",
+    "Python 3.12 with pinned NumPy, SciPy, Pillow and pycocotools versions is sufficient. The repository includes the original and v2 methods, the prospective split, all search trials, frozen settings, per-entry public-v6 statistics, overlap matrices, input/output checksums, two notebooks and a participant-oriented method explanation. Competition observations are not redistributed under the code license."
+  ],
+  [
+    "body",
+    "Reproduce with experiment.py freeze, tune and evaluate using the authorized data root; run score_public.py for public-v6 rescoring and predict_v2.py for local CSV export. The supplied pipeline-v2.ipynb shows this sequence. Rerunning an inspected split reproduces computations but does not make it blind again. No script joins a competition, uploads a file or purchases compute."
+  ],
+  [
+    "body",
+    "The public-v6 audit updates measurement only; no segmentation parameter was changed after the 100-image outcomes became available. Further development should use remaining development days and predeclare a separate untouched assessment. Candidate improvements include better disk boundary detection, component-level rejection of bright-region artifacts, and controlled split/merge handling. They are proposed future work, not measured results."
+  ],
+  [
+    "head",
+    "AI assistance and participant responsibility"
+  ],
+  [
+    "body",
+    "Codex assisted implementation, testing and drafting. The participant must review the methods, results, source licenses and writing, and be able to explain and reproduce the solution. No author expertise, organizer approval, prize eligibility or publication outcome is inferred from this draft. The displayed author name follows the approved Kaggle profile and still requires participant review."
+  ],
+  [
+    "head",
+    "Formatting status"
+  ],
+  [
+    "small",
+    "The required subtitle, opening abstract sentence, introductory wording and acknowledgment are retained from the organizer template. This PDF is a four-page local layout proof, not a verified final acmart compilation. A companion acmart source is provided for final template preparation. No template or source was edited on Overleaf."
+  ],
+  [
+    "head",
+    "Acknowledgment"
+  ],
+  [
+    "body",
+    "The organization of the Filament Segmentation Challenge 2026 is partially supported by the U.S. National Science Foundation (NSF) under Grant No. 2209912 and 2433781, directorate for Computer and Information Science and Engineering (CSE), and Office of Advanced Cyberinfrastructure (OAC), and Grant No. 2511630, AST Division Of Astronomical Sciences and MPS Directorate for Mathematical and Physical Sciences. The Filament Segmentation Challenge 2026 is sponsored by the U.S. National Science Foundation (NSF) National Solar Observatory (NSO). This work utilizes GONG data obtained by the NSO Integrated Synoptic Program, managed by the National Solar Observatory, which is operated by the Association of Universities for Research in Astronomy (AURA), Inc. under a cooperative agreement with the National Science Foundation and with contribution from the National Oceanic and Atmospheric Administration. The GONG network of instruments is hosted by the Big Bear Solar Observatory, High Altitude Observatory, Learmonth Solar Observatory, Udaipur Solar Observatory, Instituto de Astrof\u00edsica de Canarias, and Cerro Tololo Interamerican Observatory."
+  ],
+  [
+    "head",
+    "References"
+  ],
+  [
+    "small",
+    "[1] Ahmadzadeh et al. Solar Filament Segmentation Challenge 2026. Kaggle. kaggle.com/competitions/filament-segmentation-2026."
+  ],
+  [
+    "small",
+    "[2] Ahmadzadeh et al. A dataset of manually annotated filaments from H-alpha observations. Scientific Data 11, 1031 (2024). doi:10.1038/s41597-024-03876-y."
+  ],
+  [
+    "small",
+    "[3] Azim Ahmadzadeh. Self_Evaluation_Notebook, version 6, kernel version 341270459. Kaggle. kaggle.com/code/azimahmadzadeh/self-evaluation-notebook. Accessed 14 October 2026. Apache 2.0 displayed."
+  ],
+  [
+    "small",
+    "[4] SciPy documentation. scipy.ndimage.gaussian_filter. docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.gaussian_filter.html."
+  ],
+  [
+    "small",
+    "[5] SciPy documentation. scipy.ndimage.binary_closing. docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.binary_closing.html."
+  ],
+  [
+    "small",
+    "[6] Organizer report template. overleaf.com/read/vjztpvrnbrdh. Accessed 14 October 2026."
+  ]
+]

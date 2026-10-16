@@ -1,0 +1,61 @@
+Jacek Adamek | Prepared source release 2026.10.16
+1
+ThreadMask: thin-filament refinement
+Research release report | 16 October 2026
+Finding
+A full-resolution ridge regressor makes a small improvement over the frozen pixel/component baseline on
+reused development data. The combined evaluation gains one annotation-level thin match and removes
+three false positives. This does not establish an independent performance gain or a new competition
+score.
+Evaluation
+PQ: baseline / ridge
+FP: baseline / ridge
+Thin matches: baseline /
+ridge
+106 images / 95 dates
+0.271485 / 0.272835
+550 / 548
+82/314 / 83/314
+40 images / 40 dates
+0.285986 / 0.287015
+260 / 259
+44/128 / 44/128
+Combined: 146 / 135
+0.276155 / 0.277402
+810 / 807
+126/442 / 127/442
+Method
+Ten image features include intensity, local dark contrast and dark-ridge Hessian responses at scales 1, 2
+and 4 on original 2048 x 2048 images. An ExtraTrees regressor (48 trees, depth 18, minimum leaf 8)
+learns mean foreground votes from 335,163 sampled pixels across 60 training images. Training
+oversamples thin foreground; inference uses image pixels only.
+The refiner modifies existing instance masks without adding instance IDs. Width 16, probability threshold
+0.2 and radius 0 were selected on 19 tuning images. Area/support guards preserve instances with weak
+support. The same frozen model and settings were then applied to the additional 40 dates.
+
+
+Jacek Adamek | Prepared source release 2026.10.16
+2
+Interpretation and limitations
+The metric is evaluated separately for each annotation set. Thin matches are annotation-level detections,
+not unique physical filaments. The evaluation-only thin proxy uses 2 x area / inner-boundary pixel count at
+most 8, with longest bounding-box span at least 40 pixels.
+The additional 40 dates were excluded from the current pipeline's training, tuning and first assessment
+splits. Older baseline experiments had used the available dataset. These are development results, not a
+blind holdout. The additional set adds no thin matches. Descriptive date-bootstrap intervals include zero:
+first-assessment PQ gain [-0.001377, 0.004161], additional-set gain [-0.000574, 0.003717].
+Reproduction and checks
+README.md and REPRODUCE.md describe pinned dependencies, local prediction with separately
+supplied weights, and preparing a new training workspace. predict.py checks model hashes, accepts
+original-resolution grayscale input and refuses to overwrite output. A reference-image run is compared
+against the frozen research label-array digest. The root test suite checks ridge behavior and release
+integrity. Full training was not repeated during release preparation.
+Evidence and distribution
+Frozen protocols, tuning outcomes, failed alternatives and aggregate results are retained under
+outputs/solar-research-v5, solar-thin-v6, solar-thin-v7, solar-ridge-v8 and solar-ridge-validation-v9. Root
+RELEASE_MANIFEST.json identifies this source-only release; VALIDATION.json records preparation
+checks. Earlier manifests describe historical full runs.
+Original code: Apache-2.0. Competition images, annotations, trained weights, cached predictions and
+submission CSVs are excluded. Obtain inputs through their authorized source and observe their terms. No
+result is uploaded and no existing submission is changed. The observed local improvement does not
+substantiate a prize claim.

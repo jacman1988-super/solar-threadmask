@@ -1,0 +1,13 @@
+{
+  "all_annotation_entries_preserve_tp_and_fn": true,
+  "all_annotation_entries_do_not_increase_fp": true,
+  "paired_date_bootstrap_pq_gain_95": [
+    0.0066006007161610305,
+    0.01246686452623406
+  ],
+  "bootstrap_seed": 20261015,
+  "replicates": 2000,
+  "inference_check_images": 3,
+  "independent_validation": false,
+  "original_candidate_sha256": "2a58ee67e8beaa23187921d03bd7f2222db5c747ca8bfd3e7db0a9852f7a2f56"
+}

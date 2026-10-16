@@ -1,0 +1,18 @@
+[
+  {
+    "method": "joint",
+    "file": "20121208171514Mh.jpeg",
+    "exact_cached_research_match": true,
+    "annotation_and_image_cache_access_forbidden": true,
+    "instances": 13,
+    "labels_sha256": "fe24e7763f64d57b870e5f6282391140cde27084ca326f31111668d679cc9f5f"
+  },
+  {
+    "method": "learned",
+    "file": "20150207084414Th.jpeg",
+    "exact_cached_research_match": true,
+    "annotation_and_image_cache_access_forbidden": true,
+    "instances": 8,
+    "labels_sha256": "e48568457b3b1948a686d0061ae2b779cb0da326a31f03f4564e0e4a204707ae"
+  }
+]

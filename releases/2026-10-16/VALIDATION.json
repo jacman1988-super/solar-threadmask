@@ -1,0 +1,13 @@
+{
+  "prepared_on": "2026-10-16",
+  "published": false,
+  "submitted": false,
+  "unit_and_integrity_tests_passed": 6,
+  "pdf_pages_rendered_and_visually_checked": 2,
+  "original_research_artifacts_unchanged": true,
+  "complete_training_or_fresh_model_generation_repeated": false,
+  "reference_image_labels_match": true,
+  "reference_labels_sha256": "5705d7f19f8ff72be037e93b8c1b57f6c405b03952bb43cc7c64a9130f493d19",
+  "fresh_training_workspace_preparation_checked": true,
+  "limitations": "Development comparisons; small change with confidence intervals including zero; no new competition score."
+}

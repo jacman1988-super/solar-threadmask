@@ -1,0 +1,6 @@
+{
+  "tests": 25,
+  "status": "passed",
+  "command": "python -m unittest discover -v",
+  "observed_warning": "Known pycocotools/NumPy __array__ copy-keyword deprecation warning; exact mask roundtrip checks passed."
+}

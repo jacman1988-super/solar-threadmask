@@ -1,0 +1,8 @@
+{
+  "reference": "Three unchanged public v6 pure functions, NumPy adapter; no Torch/private scorer execution",
+  "absolute_errors": {
+    "v2": 0.0,
+    "v3": 0.0
+  },
+  "annotation_entries_per_method": 165
+}

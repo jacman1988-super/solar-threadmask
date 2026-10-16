@@ -1,0 +1,113 @@
+{
+  "baseline": {
+    "pq": 0.2714848327928843,
+    "tp": 445,
+    "fp": 550,
+    "fn": 682,
+    "iou_sum": 288.0454075932503,
+    "gt_split_gt0": 95,
+    "pred_merge_gt0": 5,
+    "recall": 0.3948535936113576,
+    "thin_tp": 82,
+    "thin_fn": 232,
+    "thin_recall": 0.2611464968152866
+  },
+  "learned_filter": {
+    "pq": 0.2714848327928843,
+    "tp": 445,
+    "fp": 550,
+    "fn": 682,
+    "iou_sum": 288.0454075932503,
+    "gt_split_gt0": 95,
+    "pred_merge_gt0": 5,
+    "recall": 0.3948535936113576,
+    "thin_tp": 82,
+    "thin_fn": 232,
+    "thin_recall": 0.2611464968152866
+  },
+  "joint_calibration": {
+    "pq": 0.26900163800878957,
+    "tp": 439,
+    "fp": 546,
+    "fn": 688,
+    "iou_sum": 284.0657297372818,
+    "gt_split_gt0": 92,
+    "pred_merge_gt0": 5,
+    "recall": 0.3895297249334516,
+    "thin_tp": 82,
+    "thin_fn": 232,
+    "thin_recall": 0.2611464968152866
+  },
+  "hypotheses": [
+    {
+      "name": "learned precision filter",
+      "trials": 24,
+      "selected_on_tune": {
+        "pixel_threshold": 0.7,
+        "quality": 0.2,
+        "pq": 0.26526640414022934,
+        "tp": 84,
+        "fp": 121,
+        "fn": 119,
+        "iou_sum": 54.11434644460678,
+        "gt_split_gt0": 33,
+        "pred_merge_gt0": 3,
+        "recall": 0.41379310344827586,
+        "thin_tp": 16,
+        "thin_fn": 33,
+        "thin_recall": 0.32653061224489793
+      },
+      "evaluated_on_106_images": true
+    },
+    {
+      "name": "joint rejection/addition",
+      "trials": 21,
+      "selected_on_tune": {
+        "quality": 0.205,
+        "support": 0.6,
+        "pq": 0.267231340467194,
+        "tp": 84,
+        "fp": 118,
+        "fn": 119,
+        "iou_sum": 54.11434644460678,
+        "gt_split_gt0": 31,
+        "pred_merge_gt0": 3,
+        "recall": 0.41379310344827586,
+        "thin_tp": 16,
+        "thin_fn": 33,
+        "thin_recall": 0.32653061224489793
+      },
+      "evaluated_on_106_images": true
+    },
+    {
+      "name": "contour growth",
+      "trials": 27,
+      "selected_on_tune": null,
+      "evaluated_on_106_images": false
+    },
+    {
+      "name": "contour erosion",
+      "trials": 9,
+      "selected_on_tune": null,
+      "evaluated_on_106_images": false
+    },
+    {
+      "name": "mask replacement",
+      "trials": 24,
+      "selected_on_tune": null,
+      "evaluated_on_106_images": false
+    }
+  ],
+  "thin_improvement_without_extra_fp_achieved": false,
+  "recommended_model": "existing rf_filter",
+  "assessment_images": 106,
+  "assessment_dates": 95,
+  "independent_blind": false,
+  "diagnostic": {
+    "thin_missed": 232,
+    "recoverable_any_unet": 17,
+    "recoverable_disjoint_thin_candidate": 1,
+    "recoverable_excluded_by_candidate_rules": 16
+  },
+  "published_or_submitted": false
+}

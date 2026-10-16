@@ -1,0 +1,9 @@
+{
+  "tune_pq_by_checkpoint": {
+    "unet300": 0.1214932919698777,
+    "unet600": 0.1969533360889017,
+    "unet900": 0.2080680267710516
+  },
+  "selected": "unet900",
+  "rule": "Highest tuning PQ, earliest snapshot on a tie; no assessment outcomes accessed."
+}

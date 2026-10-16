@@ -1,0 +1,101 @@
+{
+  "warning": "Training impurity diagnostic, not evidence of causality or generalization.",
+  "rows": [
+    {
+      "feature": "hessian_max_sigma_4",
+      "training_impurity_importance": 0.122826732225563
+    },
+    {
+      "feature": "std_sigma_16",
+      "training_impurity_importance": 0.09099638091205127
+    },
+    {
+      "feature": "mean_sigma_1",
+      "training_impurity_importance": 0.08777234278170895
+    },
+    {
+      "feature": "hessian_max_sigma_8",
+      "training_impurity_importance": 0.07978617849572486
+    },
+    {
+      "feature": "mean_sigma_2",
+      "training_impurity_importance": 0.07858686083464911
+    },
+    {
+      "feature": "std_sigma_4",
+      "training_impurity_importance": 0.05042039564661716
+    },
+    {
+      "feature": "fine_contrast",
+      "training_impurity_importance": 0.04674409885804816
+    },
+    {
+      "feature": "mean_sigma_4",
+      "training_impurity_importance": 0.04644270966026659
+    },
+    {
+      "feature": "std_sigma_8",
+      "training_impurity_importance": 0.04451425573187315
+    },
+    {
+      "feature": "normalized_intensity",
+      "training_impurity_importance": 0.04344183716325213
+    },
+    {
+      "feature": "raw_intensity",
+      "training_impurity_importance": 0.03877412203587611
+    },
+    {
+      "feature": "disk_distance",
+      "training_impurity_importance": 0.03667247656496006
+    },
+    {
+      "feature": "hessian_max_sigma_2",
+      "training_impurity_importance": 0.03272610355848082
+    },
+    {
+      "feature": "hessian_max_sigma_16",
+      "training_impurity_importance": 0.03202026412848326
+    },
+    {
+      "feature": "std_sigma_2",
+      "training_impurity_importance": 0.030715585072344974
+    },
+    {
+      "feature": "hessian_min_sigma_8",
+      "training_impurity_importance": 0.030300890222691033
+    },
+    {
+      "feature": "mean_sigma_16",
+      "training_impurity_importance": 0.025003256933608085
+    },
+    {
+      "feature": "mean_sigma_8",
+      "training_impurity_importance": 0.019072824618161215
+    },
+    {
+      "feature": "hessian_min_sigma_16",
+      "training_impurity_importance": 0.01905245626385941
+    },
+    {
+      "feature": "std_sigma_1",
+      "training_impurity_importance": 0.01871540473701211
+    },
+    {
+      "feature": "hessian_min_sigma_4",
+      "training_impurity_importance": 0.009503211528084208
+    },
+    {
+      "feature": "hessian_min_sigma_2",
+      "training_impurity_importance": 0.0058779470635881535
+    },
+    {
+      "feature": "hessian_max_sigma_1",
+      "training_impurity_importance": 0.005425772144268478
+    },
+    {
+      "feature": "hessian_min_sigma_1",
+      "training_impurity_importance": 0.004607892818827859
+    }
+  ]
+}

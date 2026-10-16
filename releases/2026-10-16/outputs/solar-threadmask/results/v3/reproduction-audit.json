@@ -1,0 +1,46 @@
+{
+  "engine": "Plain CPython exec of every Python code cell; no IPython-only features; subprocess output captured by notebook helper.",
+  "cells": [
+    {
+      "cell": 1,
+      "status": "passed",
+      "seconds": 0.013543900000513531
+    },
+    {
+      "cell": 2,
+      "status": "passed",
+      "seconds": 0.0007874000002630055
+    },
+    {
+      "cell": 3,
+      "status": "passed",
+      "seconds": 0.0003799999976763502
+    },
+    {
+      "cell": 4,
+      "status": "passed",
+      "seconds": 179.50325249999878
+    },
+    {
+      "cell": 5,
+      "status": "passed",
+      "seconds": 117.7444542000012
+    },
+    {
+      "cell": 6,
+      "status": "passed",
+      "seconds": 0.00069449999864446
+    },
+    {
+      "cell": 7,
+      "status": "passed",
+      "seconds": 0.01079530000424711
+    }
+  ],
+  "seconds": 297.2794955999998,
+  "executed_notebook_sha256": "f57904246d83161f796d198ee77038d860bc99b620f34fc6a0fe5c8f28c425da",
+  "reproduced_model_sha256": "c054870c0b5af39f7f9b7d2df6653db0764a95635e7c03548a024f9d603cb968",
+  "reproduced_csv_sha256": "2a58ee67e8beaa23187921d03bd7f2222db5c747ca8bfd3e7db0a9852f7a2f56",
+  "all_checks_passed": true,
+  "scientific_scope": "Reproduction on already inspected split, not new evaluation."
+}

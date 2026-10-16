@@ -1,0 +1,17 @@
+{
+  "source": "https://www.kaggle.com/code/azimahmadzadeh/self-evaluation-notebook",
+  "version": 6,
+  "source_sha256": "61d84a5795ec9903767ad173cac1147a5237db53dcb54a90d1b0d31b8d20d999",
+  "test_images": 180,
+  "rows": 3482,
+  "zero_detection_images": [
+    "20180507140210Th"
+  ],
+  "official_empty_decoder_shape": [
+    0,
+    2048,
+    2048
+  ],
+  "representation": "Zero object rows. Public process_entry selects an empty RLE list for this ID; get_overlap_df enumerates ground-truth IDs independently.",
+  "scope": "Public source inspected and unchanged empty decoder executed. Private upload validator not contacted; no submission performed."
+}

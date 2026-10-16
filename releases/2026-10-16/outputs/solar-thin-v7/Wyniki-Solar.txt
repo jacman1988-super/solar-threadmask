@@ -1,0 +1,26 @@
+Solar — dalsze próby cienkich filamentów, 16.10.2026
+Autor: Jacek Adamek
+
+Nie uzyskano potwierdzonego wariantu zwiększającego wykrywanie cienkich obiektów bez wzrostu liczby fałszywych detekcji. Zachowano dotychczasowy model jako domyślny.
+
+Ocena rozwojowa: 106 zdjęć, 95 dat, maski każdego autora oceniane osobno.
+
+Bazowy RF z filtrem: PQ 0.271485; TP 445, FP 550, FN 682; cienkie wykryte 82/314 (26.11%).
+
+Wyuczony filtr dodatkowych cienkich kandydatów: PQ 0.271485; TP 445, FP 550, FN 682; cienkie wykryte 82/314 (26.11%).
+
+Wspólna kalibracja odrzucania i dodawania: PQ 0.269002; TP 439, FP 546, FN 688; cienkie wykryte 82/314 (26.11%).
+
+Filtr jakości: 22 cechy obrazu, geometrii i prawdopodobieństw RF/U-Net; ExtraTrees 128 drzew, głębokość 8, liść >=2. Uczenie na 36 zdjęciach (3189 masek kandydatów z dwóch progów, 218 dodatnich). Etykieta dodatnia wymaga dopasowania IoU >0.5 w każdym zestawie adnotacji. Dobór progu na osobnych 19 zdjęciach. Na ocenie filtr nie dopuścił żadnego nowego obiektu: uniknął dodatkowych FP, ale nie poprawił czułości.
+
+Kalibracja odrzucania/dodawania: wybrano próg bazowego komponentu 0.205 i wsparcie RF 0.6 dla cienkich dodatków. Na strojeniu było więcej cienkich trafień i mniej FP. Na 106 zdjęciach spadła liczba FP, lecz także TP i PQ; liczba cienkich trafień nie wzrosła. Wariant odrzucono.
+
+Trzy kolejne hipotezy nie spełniły kryteriów już na 19 zdjęciach strojenia: poszerzanie cienkich obrysów (27 ustawień), ostrożne zwężanie z ochroną przed usunięciem obiektu (9 ustawień), zastępowanie istniejącej maski lepiej ocenioną maską U-Net (24 ustawienia). Nie uruchamiano oceny na 106 zdjęciach dla niewybranych wariantów.
+
+Diagnostyka: spośród 232 pomijanych cienkich adnotacji U-Net ma poprawne dopasowanie dla 17, lecz pierwotne reguły dodatkowych cienkich i odłączonych kandydatów dopuszczają tylko 1. To uzasadniło próbę zastępowania masek, ale nie stanowi automatycznej poprawy predykcji ani warunku dostępnego podczas inferencji.
+
+Definicja cienkiego obiektu pozostaje geometryczna: 2*powierzchnia/liczba pikseli wewnętrznej granicy <=8 i dłuższy rozmiar ramki >=40, przy 2048. Użyta wyłącznie do oceny adnotacji. Wszystkie metody inferencji używają wyłącznie obrazu, zapisanych modeli i protokołów.
+
+Ograniczenia: pięć hipotez, wielokrotne użycie danych rozwojowych, projekt zastępowania masek inspirowany diagnostyką na ocenie. Wyniki nie są niezależnym testem, nowym wynikiem Kaggle ani dowodem braku FP w przyszłych obrazach. Nie zmieniono bazowych modeli, CSV ani opublikowanych artefaktów.
+
+Kontrola wykonania: testy cech, ochrony masek, erozji, odrzuconych zamian i walidacji odpowiedzi Gemma; osobno dwa porównania rzeczywistej inferencji z obliczeniami badawczymi, przy zabronionym dostępie do adnotacji i pamięci predykcji obrazów.

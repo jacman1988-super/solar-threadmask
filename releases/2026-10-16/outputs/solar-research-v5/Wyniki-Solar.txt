@@ -1,0 +1,31 @@
+SOLAR: LOKALNE PORÓWNANIE NOWYCH MODELI
+Autor: Jacek Adamek
+
+Materiałów z tego eksperymentu nie opublikowano ani nie wysłano. Zgłoszony plik v3 pozostaje bez zmian.
+Dane: 170 obrazów treningowych, 55 do wyboru ustawień, 106 do oceny (95 dat).
+Dodatkowy filtr obiektów: dawne 55 obrazów strojenia podzielone na 36 do uczenia filtra i 19 do wyboru progu.
+Ustawienia modeli pikselowych wcześniej wybierano na całych 55 obrazach; dalszy wybór pozostaje rozwojowy.
+Daty zbioru oceny były oglądane we wcześniejszych badaniach. Nie jest to nowy ślepy test.
+Rozdzielenie dat nie wyklucza korelacji obserwacji z sąsiednich dni.
+Metryka: lokalna implementacja publicznego ewaluatora v6, osobno dla każdego zestawu anotacji.
+Wyników lokalnych nie należy porównywać liczbowo z publicznym wynikiem Kaggle 0,14.
+
+Metoda | PQ | TP | FP | FN | precyzja | czułość
+Dotychczasowy v3 | 0.161270 | 253 | 625 | 874 | 0.2882 | 0.2245
+Las pikselowy | 0.240011 | 406 | 687 | 721 | 0.3715 | 0.3602
+U-Net 900 | 0.209975 | 466 | 1263 | 661 | 0.2695 | 0.4135
+Las + filtr obiektów | 0.271485 | 445 | 550 | 682 | 0.4472 | 0.3949
+
+Wybór na danych rozwojowych, przed wynikiem oceny: Las + filtr obiektów.
+Zmiana PQ względem v3: +0.110215 (+68.3%).
+95% przedział sparowanego bootstrapu po datach: [0.082454, 0.137905].
+Przedział opisuje zmienność dla tych dat; nie usuwa obciążenia z wcześniejszego rozwoju metody.
+
+Ograniczenia i ocena szans:
+Nie uzyskano nowego wyniku Kaggle i nie można przypisać nowego miejsca w rankingu.
+Nie ma podstaw do gwarantowania nagrody. Ocenę jakości trzeba oddzielić od samego przyjęcia zgłoszenia.
+Sieć jest małym modelem uczonym od zera na CPU. Pozostają rozdzielanie dotykających się obiektów,
+zachowanie cienkich struktur oraz zmienność masek między ekspertami.
+
+Odtwarzanie: REPRODUCE.txt; pełne wyniki: combined-assessment.json; testy: tests.txt.
+Źródła metody i licencje: SOURCES.txt.

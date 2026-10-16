@@ -1,0 +1,14 @@
+{
+  "scope": "Frozen guard on earlier inspected v3 assessment; no selection or retuning.",
+  "rule": {
+    "feature": 8,
+    "name": "mean_disk_gap",
+    "direction": "ge",
+    "cutoff": 0.015678293341597985,
+    "quantile": 0.2
+  },
+  "rule_file_sha256": "d5c9979795587536ff97ff73dbce908f5f70fa1c9ec622459d2ad32d10be98d1",
+  "source_sha256": "de5bbb3cbff0f61e491a93e33ba8498566435796b3af50bc7202044b57053e5f",
+  "independent_validation": false,
+  "no_retuning": true
+}

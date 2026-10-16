@@ -1,23 +1,19 @@
-# Final local review package
+# ThreadMask: solar-filament research
 
-Author: Jacek Adamek. Public research archive; not submitted to the competition.
+Author: **Jacek Adamek**. Latest research update: **16 October 2026**.
 
-Start with ODTWORZENIE.txt and final-release.json. Run python -m pytest -q and python verify_final.py.
+The new release adds full-resolution ridge refinement and a dated reproduction package. On the combined development comparison (146 images / 135 dates), PQ changes from **0.276155 to 0.277402**, false positives from **810 to 807**, and thin annotation-level matches from **126/442 to 127/442**.
 
-Recommended candidate: results/v3/candidate.csv (950 instances, 180 images). Current report: report/technical-report-final-ACM.pdf.
+This is a small development improvement: confidence intervals include zero and the data are not a blind holdout. Additional 40-date validation adds no thin matches. These are local measurements, not a new Kaggle score. The report preserves unsuccessful alternatives and limitations.
 
-Development alternative: results/precision-guard/candidate.csv. It reduced false positives on two inspected assessments without lost hits; no independent validation. Never attach the alternative to the original blind score.
+Release checks: **6 tests passed**, and image-only prediction exactly reproduced the frozen reference label-array hash.
 
-README-history.md and previous report/source files preserve the development record. No code publishes, submits, accepts terms or purchases services.
+## Reproduce this update
 
-## Publication scope
+See [release README](releases/2026-10-16/README.md), [reproduction instructions](releases/2026-10-16/REPRODUCE.md), [research report](releases/2026-10-16/REPORT.pdf) and [validation record](releases/2026-10-16/VALIDATION.json).
 
-This public release was explicitly authorized by the participant. Historical JSON files and local-review documents preserve their original dated publication/submission status; those snapshots do not describe the current visibility of this repository. No Kaggle entry or organizer-form submission is performed by publishing this archive.
+Run the documented commands from `releases/2026-10-16/`. The dated release includes its own file manifest and offline integrity verifier. Its preparation records describe the local checks performed before this GitHub update. Full training and fresh model generations were not repeated during packaging.
 
-Code is Apache-2.0. Data-derived previews and results have separate terms; read ASSET-LICENSES.txt. Full source observations and model-input archives are not distributed. The recommended candidate remains results/v3/candidate.csv; the precision guard is a separately labeled development alternative.
+## Earlier version
 
-## Complete reproducible release
-
-The root contains readable code, notebooks and reports. **Before running the pipeline or verifiers, run `python unpack_release.py` once.** This validates and expands the bundled `source-and-results.zip` into this checkout, adding every results subdirectory, frozen model/configuration, reference excerpt and historical record. The archive is part of this repository; no additional unpublished file is needed. Input images for Solar and optional Gemma weights remain separately acquired resources as documented. The archive contains no credentials, full input dataset or model weights.
-
-Then install the pinned project requirements in your own Python environment and follow the existing reproduction instructions. Publication is not a Kaggle or organizer-form submission. Dated publication flags inside experimental snapshots are historical records.
+The [previous README](README-before-2026-10-16.md), original root code and original reports remain available. This GitHub update does not submit or modify a competition entry. Competition inputs, trained weights and new prediction CSVs are not included in the update.

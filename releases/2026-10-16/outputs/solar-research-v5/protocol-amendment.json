@@ -1,0 +1,7 @@
+{
+  "previous_source_sha256": "397185aeca4844b225b076feeaf077594cc3fdddb370f69890a96fad119d18b0",
+  "current_source_sha256": "48d39bcac6d488c15e37ebb8041c322bcd8b82e893998840c093fc21a303adf5",
+  "stage": "During training, before any tuning or assessment outcomes",
+  "reason": "Fix cold/warm probability cache precision mismatch",
+  "training_definition_changed": false
+}

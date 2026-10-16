@@ -1,0 +1,152 @@
+{
+  "reason": "Initial tune optimum was at highest threshold and area boundary; extend this development search before assessment.",
+  "grid": [
+    {
+      "threshold": 0.7,
+      "min_area": 20,
+      "close": 0
+    },
+    {
+      "threshold": 0.7,
+      "min_area": 20,
+      "close": 1
+    },
+    {
+      "threshold": 0.7,
+      "min_area": 60,
+      "close": 0
+    },
+    {
+      "threshold": 0.7,
+      "min_area": 60,
+      "close": 1
+    },
+    {
+      "threshold": 0.7,
+      "min_area": 120,
+      "close": 0
+    },
+    {
+      "threshold": 0.7,
+      "min_area": 120,
+      "close": 1
+    },
+    {
+      "threshold": 0.7,
+      "min_area": 240,
+      "close": 0
+    },
+    {
+      "threshold": 0.7,
+      "min_area": 240,
+      "close": 1
+    },
+    {
+      "threshold": 0.8,
+      "min_area": 20,
+      "close": 0
+    },
+    {
+      "threshold": 0.8,
+      "min_area": 20,
+      "close": 1
+    },
+    {
+      "threshold": 0.8,
+      "min_area": 60,
+      "close": 0
+    },
+    {
+      "threshold": 0.8,
+      "min_area": 60,
+      "close": 1
+    },
+    {
+      "threshold": 0.8,
+      "min_area": 120,
+      "close": 0
+    },
+    {
+      "threshold": 0.8,
+      "min_area": 120,
+      "close": 1
+    },
+    {
+      "threshold": 0.8,
+      "min_area": 240,
+      "close": 0
+    },
+    {
+      "threshold": 0.8,
+      "min_area": 240,
+      "close": 1
+    },
+    {
+      "threshold": 0.9,
+      "min_area": 20,
+      "close": 0
+    },
+    {
+      "threshold": 0.9,
+      "min_area": 20,
+      "close": 1
+    },
+    {
+      "threshold": 0.9,
+      "min_area": 60,
+      "close": 0
+    },
+    {
+      "threshold": 0.9,
+      "min_area": 60,
+      "close": 1
+    },
+    {
+      "threshold": 0.9,
+      "min_area": 120,
+      "close": 0
+    },
+    {
+      "threshold": 0.9,
+      "min_area": 120,
+      "close": 1
+    },
+    {
+      "threshold": 0.9,
+      "min_area": 240,
+      "close": 0
+    },
+    {
+      "threshold": 0.9,
+      "min_area": 240,
+      "close": 1
+    }
+  ],
+  "initial": {
+    "method": "rf",
+    "params": {
+      "threshold": 0.7,
+      "min_area": 120,
+      "close": 1
+    },
+    "tune": {
+      "params": {
+        "threshold": 0.7,
+        "min_area": 120,
+        "close": 1
+      },
+      "pq": 0.21511325644978524,
+      "tp": 200,
+      "fp": 425,
+      "fn": 397,
+      "iou_sum": 131.4341996908188,
+      "gt_split_gt0": 91,
+      "pred_merge_gt0": 3
+    },
+    "protocol_sha256": "ac39dee69b27de3b9162b2e8c48917f61e9b126447779b6594f547b8013a7520",
+    "model_sha256": "32c42716bcf2c10828ec52ecb4ee50e2c758ad24d77c107213669188f85d083d"
+  },
+  "selection": "Highest pooled tune PQ across initial best and follow-up; initial best wins ties.",
+  "source_sha256": "fe2d591e60234a09df6cc4c8fa763f6e3197a5c4f518cce2c620ef0a19466631",
+  "assessment_accessed": false
+}

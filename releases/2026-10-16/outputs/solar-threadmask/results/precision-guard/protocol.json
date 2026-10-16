@@ -1,0 +1,23 @@
+{
+  "scope": "Development only: evaluation dates already inspected in recall-v4; no independent validation or guaranteed recall preservation.",
+  "source_sha256": "1acc484f1df3d2b880864d84b02f17feeca7509f62aeb6facc3b14a8ee9df37f",
+  "model_sha256": "c054870c0b5af39f7f9b7d2df6653db0764a95635e7c03548a024f9d603cb968",
+  "baseline_threshold": 0.075,
+  "quantiles": [
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    0.8,
+    0.9,
+    0.95,
+    0.975,
+    0.99
+  ],
+  "rule": "Single feature >= or <= training quantile. Require zero TP loss on both training and tuning. Choose highest tune PQ, then fewest tune FP, then rule order. Include no-op. No retuning on evaluation.",
+  "evaluation": "All 106 previously unused dates now inspected in recall-v4. Original candidate unchanged."
+}

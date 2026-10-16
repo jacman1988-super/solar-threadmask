@@ -1,0 +1,23 @@
+{
+  "images": 212,
+  "results": {
+    "recall_variant": {
+      "tp": 687,
+      "fp": 2412,
+      "fn": 1610,
+      "iou_sum": 435.7245903015137,
+      "pq": 0.1614991068574921,
+      "recall": 0.2990857640400522
+    },
+    "guard": {
+      "tp": 687,
+      "fp": 2158,
+      "fn": 1610,
+      "iou_sum": 435.7245903015137,
+      "pq": 0.1694766979002387,
+      "recall": 0.2990857640400522
+    }
+  },
+  "independent_validation": false,
+  "original_candidate_unchanged": true
+}

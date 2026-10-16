@@ -1,0 +1,39 @@
+SOLAR — ODTWORZENIE I WYBÓR PLIKÓW
+
+Zainstaluj zależności z requirements.txt w swoim środowisku Python 3.12.
+Przykłady zakładają katalog bieżący solar-threadmask. DATA oznacza katalog
+MAGFiLO_1.0_Kaggle_2026 z autoryzowanego pobrania; CACHE i NOWY_KATALOG
+muszą być lokalnymi ścieżkami. W poleceniach zastąp te nazwy swoimi ścieżkami.
+
+Szybkie kontrole bez ponownego trenowania:
+  python -m pytest -q
+  python verify_final.py
+
+Wynik podstawowy, bez użycia etykiet podczas predykcji:
+  python predict_v3.py DATA nowy-kandydat-v3.csv
+Oczekiwany SHA256 podstawowego CSV:
+2a58ee67e8beaa23187921d03bd7f2222db5c747ca8bfd3e7db0a9852f7a2f56
+
+Osobna alternatywa rozwojowa, bez zmiany podstawowego CSV:
+  python predict_precision_guard.py DATA nowy-kandydat-alternatywny.csv
+Model i próg filtra są zapisane; nie wymagają etykiet testowych.
+
+Pełne odtworzenie podstawowego eksperymentu:
+  python experiment_v3.py freeze DATA CACHE --output NOWY_KATALOG
+  python experiment_v3.py fit DATA CACHE --output NOWY_KATALOG
+  python experiment_v3.py tune DATA CACHE --output NOWY_KATALOG
+  python experiment_v3.py evaluate DATA CACHE --output NOWY_KATALOG
+  python predict_v3.py DATA nowy-kandydat-v3.csv --model-dir NOWY_KATALOG
+
+pipeline-v3-executed.ipynb zachowuje rzeczywiste wykonanie siedmiu komórek
+silnikiem plain CPython, bez udawania wykonania w jądrze Jupyter.
+Wcześniejsze protokoły i wyniki pozostawiono w results/.
+Skrypty badań recall/guard zachowują oryginalne ścieżki lokalnego badania
+i odmawiają nadpisania istniejącego wyniku. Aby powtarzać te badania,
+pracuj w kopii projektu ze świeżymi katalogami wyników; dostosuj jawnie
+ścieżkę danych i cache. To ponowne obliczenie znanych danych, nie nowy
+ślepy eksperyment. Kod badań i sumy źródeł są zachowane w protokołach.
+
+Raport końcowy jest kompilowany z report/report-final.tex i plików obok
+przez acmart/Tectonic. W środowisku lokalnym wykonano kompilację i obejrzano
+wszystkie cztery strony. Historyczny raport v3 pozostał bez zmian.

@@ -1,0 +1,68 @@
+Solar supervised segmentation study, local development version 5
+Author: Jacek Adamek
+
+Keep this folder beside the unchanged solar-threadmask folder. Install its
+requirements.txt and this folder's requirements-extra.txt. Use Python 3.12.
+The trained forest requires scikit-learn 1.7.2; torch checkpoints are state
+dictionaries loaded with weights_only=True. Only load trusted model artifacts.
+
+Authorized local dataset must exist at:
+work/solar-data/MAGFiLO_1.0_Kaggle_2026
+Intermediate feature/probability caches are created under work/solar-v5-cache.
+
+Existing artifacts are deliberately preserved by the training and assessment
+commands. Use a separate clean working copy for a full rerun; do not overwrite
+the submitted v3 project or its candidate.csv.
+
+Commands, from the shared workspace root:
+  python outputs/solar-research-v5/research.py rf
+  python outputs/solar-research-v5/neural.py
+  python outputs/solar-research-v5/research.py tune --method rf
+  python outputs/solar-research-v5/rf_refinement.py
+  python outputs/solar-research-v5/research.py tune --method unet300
+  python outputs/solar-research-v5/research.py tune --method unet600
+  python outputs/solar-research-v5/research.py tune --method unet900
+  python outputs/solar-research-v5/component_followup.py fit
+  Choose the neural snapshot only by the stored tuning PQ, earliest on a tie.
+  python outputs/solar-research-v5/rebuild_baseline_cache.py
+  python outputs/solar-research-v5/research.py assess --methods rf SELECTED_UNET
+  python outputs/solar-research-v5/component_followup.py assess
+  python -m pytest outputs/solar-research-v5/test_research.py -q
+  python outputs/solar-research-v5/inference.py IMAGE.jpeg LOCAL_LABELS.npy
+
+Protocol note:
+protocol-initial.json was frozen before training. protocol.json documents a
+pre-tuning correction that makes cold/warm float16 probability caches identical.
+The correction changes no training data, target, hyperparameter or split.
+neural-training.json records the initial protocol hash because training began
+before this cache-only correction. Model selection and assessment use the
+amended protocol and its source hash. Both protocol versions are retained.
+performance-amendment.json additionally records geometry reuse during tuning.
+It does not change mask pixels, settings or selection; all 24 grid outputs are
+checked against the unshared implementation in the exact-RLE parity test.
+source-snapshots retains the exact initial research source and cache-fix version;
+their SHA-256 values match the two amendment records. protocol-cache-fix.json
+matches the protocol hash stored in rf-training.json, while protocol-initial.json
+matches the protocol hash stored in neural-training.json.
+rf-refinement-protocol.json describes a tuning-only follow-up because the first
+forest optimum lay on a search boundary. Its outcome is frozen before opening
+the assessment. The original tuning result is retained as rf-frozen-initial.json.
+component-protocol.json records an additional instance-quality filter, trained
+on 36 of the old tuning observations and thresholded on the other 19. Pixel
+model settings had already been chosen on the full 55; this further reuse is
+development, not independent validation. All assessment dates remain excluded
+from both pixel training and component training/selection. Model family selection
+on the same 19 observations is frozen in selection-followup-protocol.json and
+model-selection-followup.json before assessment outcomes are available.
+
+Interpretation:
+Training: 170 observations; tuning: 55; assessment: 106, separated by date.
+The assessment dates were previously inspected during earlier development.
+This is NOT a new independent blind test, and confidence intervals cannot
+remove bias from previous development choices. Local public-v6 PQ differs from
+the Kaggle public score; compare v3 and new methods on the same local images.
+Do not compare these local values directly with the leaderboard's 0.14 or 0.62.
+
+No publication, upload, account action or competition submission is implemented.
+Model input is H-alpha image pixels only. Training targets are segmentation
+masks only; auxiliary annotation metadata is not used.

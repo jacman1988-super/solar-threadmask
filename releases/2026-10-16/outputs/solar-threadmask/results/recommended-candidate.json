@@ -1,0 +1,11 @@
+{
+  "version": "v3",
+  "candidate": "v3/candidate.csv",
+  "csv_sha256": "2a58ee67e8beaa23187921d03bd7f2222db5c747ca8bfd3e7db0a9852f7a2f56",
+  "frozen_model_sha256": "c054870c0b5af39f7f9b7d2df6653db0764a95635e7c03548a024f9d603cb968",
+  "evidence": "v3/blind-evaluation.json",
+  "decision": "Predeclared paired date-cluster interval lower endpoint > 0; criterion met.",
+  "private_upload_validated": false,
+  "submitted": false,
+  "participant_review_pending": true
+}

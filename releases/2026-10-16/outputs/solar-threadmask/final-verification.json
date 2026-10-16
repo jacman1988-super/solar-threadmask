@@ -1,0 +1,36 @@
+{
+  "recommended_candidate": "results/v3/candidate.csv",
+  "original_checks": {
+    "author": "Jacek Adamek",
+    "local_checks_passed": true,
+    "csv_rows": 950,
+    "instance_review": {
+      "decoded_instances": 950,
+      "images": 180,
+      "zero_detection_images": 11,
+      "overlapping_instance_pairs": 0,
+      "source_input_hashes_checked": 0,
+      "csv_sha256": "2a58ee67e8beaa23187921d03bd7f2222db5c747ca8bfd3e7db0a9852f7a2f56",
+      "submitted": false,
+      "private_validator_tested": false
+    },
+    "images": 180,
+    "reproduction_confirmed": true,
+    "published": false,
+    "submitted": false,
+    "remaining_external_steps": [
+      "Participant review",
+      "Approved public repository URL",
+      "Explicit approval for any submission",
+      "Private platform validation"
+    ]
+  },
+  "alternative_audit": {
+    "decoded_instances": 1571,
+    "images": 180,
+    "zero_detection_images": 5,
+    "overlapping_instance_pairs": 0
+  },
+  "ready_for_local_review": true,
+  "submitted": false
+}

@@ -1,0 +1,24 @@
+{
+  "method": "unet900",
+  "params": {
+    "threshold": 0.7,
+    "min_area": 120,
+    "close": 0
+  },
+  "tune": {
+    "params": {
+      "threshold": 0.7,
+      "min_area": 120,
+      "close": 0
+    },
+    "pq": 0.2080680267710516,
+    "tp": 253,
+    "fp": 695,
+    "fn": 344,
+    "iou_sum": 160.73255068063736,
+    "gt_split_gt0": 115,
+    "pred_merge_gt0": 4
+  },
+  "protocol_sha256": "ac39dee69b27de3b9162b2e8c48917f61e9b126447779b6594f547b8013a7520",
+  "model_sha256": "94480bbbbdacc9891bd68d81692bb89265e9a0e529c48515a5e4c762b71701cc"
+}

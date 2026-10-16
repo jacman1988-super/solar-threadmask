@@ -1,0 +1,85 @@
+{
+  "images": 3,
+  "all_checks_passed": true,
+  "selection": "First three lexicographic filenames; deterministic, inspected evaluation data",
+  "rows": [
+    {
+      "file": "20110312082634Lh.jpeg",
+      "method": "recall_v4",
+      "annotation_set": "040401-20110312082634Lh",
+      "tp": 5,
+      "fp": 8,
+      "fn": 4,
+      "iou_sum": 3.2352521419525146,
+      "gt_split_gt0": 1,
+      "pred_merge_gt0": 0,
+      "gt_count": 9,
+      "pred_count": 13
+    },
+    {
+      "file": "20110312082634Lh.jpeg",
+      "method": "precision_guard",
+      "annotation_set": "040401-20110312082634Lh",
+      "tp": 5,
+      "fp": 8,
+      "fn": 4,
+      "iou_sum": 3.2352521419525146,
+      "gt_split_gt0": 1,
+      "pred_merge_gt0": 0,
+      "gt_count": 9,
+      "pred_count": 13
+    },
+    {
+      "file": "20110511063154Uh.jpeg",
+      "method": "recall_v4",
+      "annotation_set": "040102-20110511063154Uh",
+      "tp": 0,
+      "fp": 8,
+      "fn": 6,
+      "iou_sum": 0.0,
+      "gt_split_gt0": 0,
+      "pred_merge_gt0": 0,
+      "gt_count": 6,
+      "pred_count": 8
+    },
+    {
+      "file": "20110511063154Uh.jpeg",
+      "method": "precision_guard",
+      "annotation_set": "040102-20110511063154Uh",
+      "tp": 0,
+      "fp": 8,
+      "fn": 6,
+      "iou_sum": 0.0,
+      "gt_split_gt0": 0,
+      "pred_merge_gt0": 0,
+      "gt_count": 6,
+      "pred_count": 8
+    },
+    {
+      "file": "20110625163814Mh.jpeg",
+      "method": "recall_v4",
+      "annotation_set": "010101-20110625163814Mh",
+      "tp": 0,
+      "fp": 3,
+      "fn": 5,
+      "iou_sum": 0.0,
+      "gt_split_gt0": 0,
+      "pred_merge_gt0": 0,
+      "gt_count": 5,
+      "pred_count": 3
+    },
+    {
+      "file": "20110625163814Mh.jpeg",
+      "method": "precision_guard",
+      "annotation_set": "010101-20110625163814Mh",
+      "tp": 0,
+      "fp": 2,
+      "fn": 5,
+      "iou_sum": 0.0,
+      "gt_split_gt0": 0,
+      "pred_merge_gt0": 0,
+      "gt_count": 5,
+      "pred_count": 2
+    }
+  ]
+}

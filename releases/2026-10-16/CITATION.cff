@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "Please cite the reports and pinned experiment protocols when using this artifact."
+title: "solar-threadmask"
+version: "2026.10.16"
+authors:
+  - family-names: Adamek
+    given-names: Jacek

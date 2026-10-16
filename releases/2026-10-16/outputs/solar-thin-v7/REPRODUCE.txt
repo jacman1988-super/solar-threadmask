@@ -1,0 +1,35 @@
+Local development continuation — Jacek Adamek — 2026-10-16
+
+Preserve frozen output folders. Copy scripts to a fresh sibling directory to
+reproduce; keep solar-research-v5 and solar-thin-v6 alongside them. Use workspace
+Python with work/python-packages and work/solar-ml-packages on PYTHONPATH.
+
+precision.py: frozen 36-image training / 19-image tuning split; ExtraTrees
+consensus-quality model over candidates from two fixed U-Net thresholds. Select
+only a setting with more tuning thin TP and no additional tuning FP, no lower
+total TP/PQ. Freeze before 106-image assessment. Includes cache of candidate
+features and IoU matrices in work/solar-thin-v7-cache for later diagnosis.
+
+joint.py: calibrate weak baseline rejection plus previously defined thin
+additions. Same tuning constraints, separate source/protocol freeze. Historical
+runner writes an optional cache into the parent workspace work directory;
+create ../work/solar-thin-v7-cache before reproducing this runner. The completed
+cache was relocated into this project's work/solar-thin-v7-cache afterwards.
+This cache path does not affect predictions, selection or reported results.
+
+contour.py: full-resolution expansion of existing thin elongated masks, nearest
+original label assignment. Rejected on tuning; no assessment selection.
+shrink.py: erosion with minimum area and retained-area guard. Rejected on tuning.
+replace_masks.py: quality-gated mask substitution with unambiguous pairing and
+constant instance count. Motivated by the preserved missed-diagnostic.json on
+already-inspected assessment data; rejected on tuning, no new assessment.
+
+inference.py: separate image-only experimental functions; does not change the
+existing project default. check_runtime.py verifies learned/joint predictions
+against cached research on actual images while forbidding Dataset construction
+and cached probability lookup. No annotations are read by production inference.
+
+Run test_inference.py, test_contour.py, test_replacement.py together with
+../gemma-feedback-v3/test_patch_review.py using pytest. report.py summarizes all
+trials including failures. These are reused-development results, not an unbiased
+generalization estimate. No code here publishes or submits anything.

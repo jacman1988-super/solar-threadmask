@@ -1,0 +1,8 @@
+{
+  "new_evaluation_date_disjoint": true,
+  "source_hash_matches_frozen_protocol": true,
+  "aggregate_arithmetic_verified": true,
+  "nested_threshold_count_order_verified": true,
+  "original_candidate_sha256": "2a58ee67e8beaa23187921d03bd7f2222db5c747ca8bfd3e7db0a9852f7a2f56",
+  "candidate_replaced": false
+}

@@ -1,0 +1,5 @@
+{
+  "previous_source_sha256": "48d39bcac6d488c15e37ebb8041c322bcd8b82e893998840c093fc21a303adf5",
+  "current_source_sha256": "284ca8e21360d8e357a5dd34cd62f64261edabcd7495bf9982aa21c7fb2e0ee2",
+  "reason": "Geometry reused for identical threshold/closing pairs; exact RLE parity test over all 24 configurations. No changed masks, settings, split or selection rule. Applied during RF tuning, before any tuning summary or assessment."
+}

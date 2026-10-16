@@ -1,0 +1,21 @@
+Additional-date frozen evaluation — Jacek Adamek — 2026-10-16
+
+Use a fresh sibling output directory; scripts refuse to overwrite protocol.
+Requires unchanged solar-ridge-v8, solar-research-v5 and its local dependencies,
+authorized original dataset and workspace Python packages. No model retraining.
+
+evaluate_extra.py deterministically picks one image on each of 40 dates excluded
+from the complete current v5 training/tuning/assessment date union. Historical
+baseline work used/inspected other parts of the same dataset, so these dates
+must not be called entirely untouched or a blind test. Freeze source, filenames,
+parameters and model hashes before reading image-level evaluation outcomes.
+
+Run image-only baseline, frozen ridge model and contour correction, then score
+against segmentation masks using the same public organizer metric and same
+thin-object proxy. Protocol parameters [16,.2,0] are not adjusted. Checkpoints
+store full per-annotator rows, completion state and baseline/new mask hashes.
+
+report.py reports additional 40 and combined original106+additional40 separately,
+including paired date bootstrap, failures and per-image deltas. Never choose
+new parameters from this evaluation or claim a Kaggle score. Nothing is sent
+or published and no paid service is used.

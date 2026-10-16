@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-14",
+  "command": "python -m unittest discover -s outputs/solar-threadmask -v",
+  "tests_run": 11,
+  "passed": 11,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Includes sparse-encoding pixel equality, compressed-vs-dense diagnostic PQ parity and synthetic end-to-end pipeline. Additionally all 71 instances on real observation 20110109104734Ch.jpeg passed sparse-vs-dense pixel comparison. Does not establish organizer metric parity.",
+  "warning": "pycocotools emitted a NumPy __array__ copy keyword deprecation warning; RLE checks passed."
+}

@@ -1,0 +1,27 @@
+Local research sources consulted on 2026-10-15
+
+Ronneberger, Fischer, Brox. U-Net: Convolutional Networks for Biomedical Image
+Segmentation. 2015. https://arxiv.org/abs/1505.04597
+Basis for the standard encoder/decoder and skip-connection architecture.
+
+scikit-image: Trainable segmentation using local features and random forests.
+https://scikit-image.org/docs/0.25.x/auto_examples/segmentation/plot_trainable_segmentation.html
+Basis for comparing a supervised multiscale pixel classifier/regressor against
+hand thresholding. We implement our own image normalization and feature array.
+
+scikit-learn ExtraTreesRegressor documentation:
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesRegressor.html
+
+Flat U-Net: An Efficient Ultralightweight Model for Solar Filament Segmentation
+in Full-disk H-alpha Images. https://arxiv.org/abs/2502.07259
+Domain evidence for studying lightweight learned segmentation. Our small U-Net
+does not implement Flat U-Net or claim its published performance.
+
+Kaggle official Solar Filament Segmentation Challenge 2026 overview:
+https://www.kaggle.com/competitions/filament-segmentation-2026/overview
+We retain the existing locally audited public-v6 evaluator. No private scorer,
+new leaderboard scores, competitor weights or competitor predictions are used.
+
+All inference is local CPU. No cloud training, payment, publication or submission.
+Original new implementation: Jacek Adamek, assisted by Codex; Apache-2.0.
+Training observations and annotation-derived masks retain their dataset terms.

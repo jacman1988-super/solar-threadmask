@@ -1,0 +1,33 @@
+Full-resolution ridge experiment — Jacek Adamek — 2026-10-16
+
+Preserve frozen protocols/results. Copy scripts to a fresh sibling folder for
+reproduction; keep solar-research-v5, solar-thin-v6 and solar-thin-v7 alongside.
+Use workspace Python with work/python-packages and work/solar-ml-packages on
+PYTHONPATH. Existing authorized dataset is in work/solar-data.
+
+ridge.py builds ten full-2048 image features: normalized/raw intensity, local
+dark contrast, and multiscale Hessian ridge/eigenvalue responses. Unlike prior
+postprocessing, this is a separately trained pixel model at full resolution.
+No annotations, filenames, previous per-image predictions or coordinates are
+inference features. Baseline masks only restrict the region being refined.
+
+train_evaluate.py freezes 60 training filenames selected deterministically
+from the original 170-image training pool. Uses mean annotator foreground vote
+and oversamples thin foreground from training segmentation masks only. Never
+uses non-segmentation annotation metadata. ExtraTrees 48 trees, depth18, leaf8.
+19 tuning images select from 27 full-resolution contour correction settings
+with more thin TP, no extra FP and no lower total TP/PQ required. Freeze before
+106-image development assessment; retain baseline if no setting qualifies.
+
+Refinement changes existing instance contours only, with nearest-label ownership
+and retained-area guards. It never introduces a new instance ID. Forest output
+is float32 during scoring/inference. Float16 diagnostic cache is not used to
+make predictions or to reproduce scored masks.
+
+image_only.py checks model/protocol/feature hashes and reads only the input image
+and frozen artifacts. check_runtime.py compares actual image inference to the
+research calculation while forbidding annotation loading and cached probability
+lookup. test_ridge.py checks ridge polarity at three widths and contour guards.
+
+Previously inspected development data, not an independent blind test or Kaggle
+score. No publication, uploaded predictions, rule acceptance, or paid services.

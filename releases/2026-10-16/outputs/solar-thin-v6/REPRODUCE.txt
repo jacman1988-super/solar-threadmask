@@ -1,0 +1,50 @@
+Solar: thin-filament development experiments, 2026-10-16
+Author: Jacek Adamek
+
+These local experiments do not change the submitted CSV or Kaggle score.
+Dependencies and original datasets remain in the existing workspace.
+
+experiment.py freezes a protocol, trains three component filters on the
+36-image development subpool and selects on the separate 19-image subpool.
+Hysteresis keeps connected pixels >= low only if a seed >= .65 exists.
+Minimum area is eight pixels at 1024 resolution. This hypothesis was rejected
+on tuning; the existing baseline remains intact.
+
+supplement.py is a separately frozen, exploratory second hypothesis. It uses
+the existing U-Net900 model to propose long, thin components at three pixel
+thresholds. It rejects overlap with the existing filtered RF output and a
+two-pixel margin around it. Shape thresholds are selected on the same
+19-image tuning subpool. Existing RF instance masks are preserved exactly.
+
+The thin-object evaluation uses segmentation masks only: 2*area divided by
+the number of inner-boundary pixels <= 8, and longest bounding-box span >=
+40 pixels at 2048 resolution. This is a width proxy, not an anatomical label.
+It is never used as inference input. Each annotator is evaluated separately.
+IoU > .5 defines a detected instance, matching the public organizer metric.
+
+The 106-image assessment contains 95 dates excluded from training/tuning,
+but was inspected in previous project development. Results are NOT an
+independent blind estimate and NOT the private/public Kaggle leaderboard.
+Choosing a second hypothesis after the first failed also introduces reuse
+of tuning data; no claim of unbiased model selection is made.
+
+Preserve these output directories. To reproduce, copy source to a fresh
+output directory at the same level, retain solar-research-v5 alongside it,
+and run experiment.py followed by supplement.py with the workspace Python
+packages on PYTHONPATH. Both scripts refuse to overwrite frozen protocols.
+Run test_experiment.py and test_supplement.py with pytest for synthetic
+checks of support, seeds, noise, overlap exclusion, and shape selection.
+
+Third exploratory hypothesis: consensus.py requires mean forest support
+for each additional U-Net component. Seven support thresholds are compared
+on the same 19-image tuning pool. The frozen choice is .6. This hypothesis
+was motivated by the aggregate assessment result of the second hypothesis;
+its own 106-image assessment is therefore explicitly reused development
+data. consensus_runtime.py provides separate annotation-free inference.
+check_consensus_runtime.py verifies exact agreement on an actual image while
+forbidding annotations and image caches. Include test_consensus.py in pytest
+for seven synthetic checks across the three methods. report_consensus.py
+keeps the earlier report and adds the final consensus outcomes.
+
+No publication, uploads, contest submissions, paid services, or remote
+model inference are performed by these scripts.

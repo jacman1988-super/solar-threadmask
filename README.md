@@ -1,26 +1,17 @@
-# ThreadMask: solar-filament research
+# ThreadMask: reproducible solar-filament research
 
-Author: **Jacek Adamek**.
+Author: **Jacek Adamek**. Complete reproducibility update: **16 October 2026**.
 
-## Complete competition-update materials
+The complete proposed competition update is at [submission-update-2026-10-16/README.md](submission-update-2026-10-16/README.md). It includes all three fitted models, pinned requirements, exporter, independent verifier, full-pipeline notebook and four-page report. No private weight directory or paid inference service is required; obtain the authorized competition test images separately.
 
-Start with [submission-update-2026-10-16/README.md](submission-update-2026-10-16/README.md) for the latest notebook, exact commands, integrity checks and proposed competition-update documents.
+The clean-clone full run regenerated all **180 images / 1136 instances** and exactly matched candidate CSV SHA256 `9d8f64cdca2fcf996ca8efefff5f6444ecee1480195ddb312a8e72029e63a639`. Eleven images have no detections. All six release tests passed. [Verification record](submission-update-2026-10-16/PUBLIC-REPRODUCTION.json).
 
+Local reused-development PQ changes from 0.276155 to 0.277402, FP from 810 to 807 and thin annotation-level matches from 126/442 to 127/442. Confidence intervals include zero; additional 40-date validation adds no thin matches. These modest local results are **not a new Kaggle score**.
 
-Author: **Jacek Adamek**. Latest research update: **16 October 2026**.
+The three data-derived model files and attributed example graphics have separate CC BY-NC 4.0 notices. Code remains Apache-2.0. No original competition image/annotation archive, account fields or prediction CSV is published in this update.
 
-The new release adds full-resolution ridge refinement and a dated reproduction package. On the combined development comparison (146 images / 135 dates), PQ changes from **0.276155 to 0.277402**, false positives from **810 to 807**, and thin annotation-level matches from **126/442 to 127/442**.
+## Earlier evidence and source release
 
-This is a small development improvement: confidence intervals include zero and the data are not a blind holdout. Additional 40-date validation adds no thin matches. These are local measurements, not a new Kaggle score. The report preserves unsuccessful alternatives and limitations.
+The immutable [16 October source release](releases/2026-10-16/README.md), original root code and earlier reports remain available. The older release intentionally omitted weights; Solar's separate complete update now includes its three fitted models. Historical manifests describe their own artifacts and are unchanged.
 
-Release checks: **6 tests passed**, and image-only prediction exactly reproduced the frozen reference label-array hash.
-
-## Reproduce this update
-
-See [release README](releases/2026-10-16/README.md), [reproduction instructions](releases/2026-10-16/REPRODUCE.md), [research report](releases/2026-10-16/REPORT.pdf) and [validation record](releases/2026-10-16/VALIDATION.json).
-
-Run the documented commands from `releases/2026-10-16/`. The dated release includes its own file manifest and offline integrity verifier. Its preparation records describe the local checks performed before this GitHub update. Full training and fresh model generations were not repeated during packaging.
-
-## Earlier version
-
-The [previous README](README-before-2026-10-16.md), original root code and original reports remain available. This GitHub update does not submit or modify a competition entry. Competition inputs, trained weights and new prediction CSVs are not included in the update.
+**No competition update has been submitted by this GitHub publication.**

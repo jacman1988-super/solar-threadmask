@@ -1,4 +1,43 @@
 {
-  "status": "verification_in_progress",
-  "competition_submitted": false
+  "status": "passed",
+  "date": "2026-10-16",
+  "source_commit": "33dcf54e31d491e02f7355af0bbc9547f5011d84",
+  "source_clone": "Fresh Git clone using --no-local; tested source commit is retained in published Git history.",
+  "python": "3.12.14",
+  "notebook_code_cells_executed": 4,
+  "execution_engine": "Plain CPython, not a Jupyter server",
+  "private_reference_weight_directory_used": false,
+  "full_training_or_fresh_gemma_generation_repeated": false,
+  "competition_submitted": false,
+  "checks": [
+    {
+      "name": "pip-check",
+      "returncode": 0
+    },
+    {
+      "name": "source-integrity",
+      "returncode": 0
+    },
+    {
+      "name": "tests",
+      "returncode": 0
+    },
+    {
+      "name": "candidate-audit",
+      "returncode": 0
+    }
+  ],
+  "csv_sha256": "9d8f64cdca2fcf996ca8efefff5f6444ecee1480195ddb312a8e72029e63a639",
+  "exact_candidate_match": true,
+  "images": 180,
+  "instances": 1136,
+  "zero_detection_images": 11,
+  "fitted_weights_verified": {
+    "component-filter.joblib": "4a59087e6c165b42f5f402307d2a3add92fbd8f18c3ac05d9e078866128f7fe9",
+    "pixel-forest.joblib": "32c42716bcf2c10828ec52ecb4ee50e2c758ad24d77c107213669188f85d083d",
+    "ridge-forest.joblib": "79ca779b08f34b3f8a0234bbe3ef78216b698bdcdccbd4b57f7b6a504f0ee2d8"
+  },
+  "competition_data_redistributed": false,
+  "seconds": 560.61,
+  "public_notebook_runner_smoke_test": true
 }

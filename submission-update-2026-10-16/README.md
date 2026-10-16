@@ -29,3 +29,13 @@ technical-report-update.pdf is the four-page organizer-template report; its edit
 ## Scope and licensing
 
 The local development improvement is small, confidence intervals include zero, and additional 40-date validation adds no thin matches. No new Kaggle score is known. Source code is Apache-2.0. Data-derived fitted models and example graphics retain separate CC BY-NC 4.0 terms; see weights/LICENSE.txt and ASSET-NOTICES.txt. No observation/annotation archive, account data or competition-form fields are included.
+
+## Execute the notebook without a Jupyter installation
+
+The public run_notebook.py executes only the notebook supplied in this directory using plain CPython. Use a new output path:
+
+```text
+python submission-update-2026-10-16/run_notebook.py --data AUTHORIZED_DATA --full-export --output work/executed-solar.ipynb
+```
+
+The Solar full notebook export uses work/public-reproduction/candidate-ridge-v8.csv and refuses to overwrite it. The published executed notebook records the actual full run; the CLI smoke test separately checks the public runner.

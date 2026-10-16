@@ -1,0 +1,1 @@
+The package verifies code/data-derived artifact bytes and deterministic outputs under the recorded environment. It does not establish scientific generalization, private-scorer equivalence, or a competition judging outcome. Source-only release history remains unchanged. These are public proposed-update materials; no competition submission is made by any script here.

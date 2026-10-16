@@ -1,0 +1,29 @@
+{
+  "version": "2026-10-16-complete-reproduction",
+  "files": {
+    "ASSET-NOTICES.txt": "0217a92ce494aa7c3e7ad045797c6a0d222440f49c7370ec325efc213aa8d5dd",
+    "candidate-ridge-v8.audit.json": "3d2dbebb9e265c543e4b59765534aced0920b47193ad9599fdfce845f95b6393",
+    "development-results.json": "752f288d3f7a148978b7626731d3b2c7dc3eebcd23c9a240afee43e4a6858baf",
+    "examples-provenance.json": "4da62e36f35f8fd55823fed24a3a163c2b9903a3c8fe05f1cbfccf0511bd8d99",
+    "independent-csv-audit.json": "17fa1e8bfd147d2c290da9d00dc98b2944b21bb9671029c9a3ad46cb713fa095",
+    "pipeline-update.ipynb": "1baa0830c86a9d19ac382064fd46e6299db50bb925a8b9ae2e081e97435799dd",
+    "preamble.tex": "00a8655068aa6cce728c36a61a3234a6f974d9f024b968b09d300d2c82bd9d7d",
+    "predict_submission.py": "504f3a673e4202f5fcf5cf201164b81485691a5ef23fbc64324a3764f2526133",
+    "PUBLIC-REPRODUCTION.json": "6581a8ea1cdf4d7d011061308e5cbe8776d84c9d30781dca0a3c93e4d5944894",
+    "README.md": "5e9de619e972ea2f1665f7b338c56229396df3810a97e395f0e7313b41e69d0a",
+    "REPRODUCIBILITY-SCOPE.txt": "f5b36a3593fada0937ed0328671df5320b379a618700037fc362aab0e1e0a911",
+    "requirements-docs.txt": "aff9e2a7514ab38c61169ff48cd7e414e424068c9216e3a9e277318c38a8dac8",
+    "requirements.txt": "1bdb9d80f47b69717c8f387411d952b18095a92a80711b6c227f922921a84fb5",
+    "segmentation-examples.png": "81823ecf18246467d06c91220927abc720b9cb60687314bc68b9e0265f4a9145",
+    "technical-report-update.pdf": "77e5336094feeb8df142f1e7ccfe67e90afd1c9b96d6dec59ecd7ec902be84f8",
+    "technical-report-update.tex": "5618199871fdd9e39c5db8190b49d91123603aca274b887458dcdba82a79ee50",
+    "verify_candidate.py": "bdd0595e28f3bae12c05be34393229e57e89f7eadfe84c0087d2b260cfe47ea7",
+    "verify_materials.py": "452bf38261f89cfd97379f6f0d843689d44c9374c2102c74fccdf78ebd2e25bc",
+    "weights/component-filter.joblib": "4a59087e6c165b42f5f402307d2a3add92fbd8f18c3ac05d9e078866128f7fe9",
+    "weights/LICENSE.txt": "40a23ad9ee0e1706e63c63ac905da6bf92fa8aa3ebf527b84e19a7a5606433c3",
+    "weights/pixel-forest.joblib": "32c42716bcf2c10828ec52ecb4ee50e2c758ad24d77c107213669188f85d083d",
+    "weights/ridge-forest.joblib": "79ca779b08f34b3f8a0234bbe3ef78216b698bdcdccbd4b57f7b6a504f0ee2d8",
+    "weights/SHA256.json": "26e04ea387b0ffd32d6663b95d8f992b47bd0b1aa9771301225c9fcbc2055bcd"
+  },
+  "competition_submitted": false
+}

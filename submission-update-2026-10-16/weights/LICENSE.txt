@@ -1,0 +1,19 @@
+SPDX-License-Identifier: CC-BY-NC-4.0
+
+These data-derived fitted model artifacts are distributed under the
+Creative Commons Attribution-NonCommercial 4.0 International license:
+https://creativecommons.org/licenses/by-nc/4.0/legalcode.en
+
+Fitted artifacts: Jacek Adamek, 2026, with Codex assistance.
+Training inputs: MAGFiLO manually annotated GONG H-alpha observations,
+Ahmadzadeh et al., Scientific Data 11, 1031 (2024),
+https://doi.org/10.1038/s41597-024-03876-y
+Observations: NSO/GONG. Competition dataset license: CC BY-NC 4.0,
+https://www.kaggle.com/competitions/filament-segmentation-2026/data
+
+Changes: the supplied observations and segmentation masks were transformed
+into image-derived features, sampled targets and fitted tree ensembles.
+No original observation or annotation archive is included. Neither the
+organizers nor data providers endorse these models. Preserve attribution,
+license links and this description when sharing the artifacts. Source code
+retains its separate Apache-2.0 license; it does not relicense these assets.

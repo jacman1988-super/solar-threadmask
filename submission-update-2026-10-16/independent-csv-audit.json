@@ -1,0 +1,11 @@
+{
+  "decoded_instances": 1136,
+  "images": 180,
+  "zero_detection_images": 11,
+  "overlapping_instance_pairs": 0,
+  "csv_sha256": "9d8f64cdca2fcf996ca8efefff5f6444ecee1480195ddb312a8e72029e63a639",
+  "source_input_hashes_checked": 180,
+  "uploaded": false,
+  "private_validator_tested": false,
+  "new_kaggle_score": null
+}

@@ -1,5 +1,12 @@
 # ThreadMask: solar-filament research
 
+Author: **Jacek Adamek**.
+
+## Complete competition-update materials
+
+Start with [submission-update-2026-10-16/README.md](submission-update-2026-10-16/README.md) for the latest notebook, exact commands, integrity checks and proposed competition-update documents.
+
+
 Author: **Jacek Adamek**. Latest research update: **16 October 2026**.
 
 The new release adds full-resolution ridge refinement and a dated reproduction package. On the combined development comparison (146 images / 135 dates), PQ changes from **0.276155 to 0.277402**, false positives from **810 to 807**, and thin annotation-level matches from **126/442 to 127/442**.

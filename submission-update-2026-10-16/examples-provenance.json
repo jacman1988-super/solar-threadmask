@@ -1,0 +1,14 @@
+[
+  {
+    "file": "20110312082634Lh.jpeg",
+    "selection": "First two filenames in frozen original assessment list; no outcome-based replacement.",
+    "baseline_labels_sha256": "b98aab9ad5944575a9738c081344a38e04a03b62ed5704dc92e69afeb3cacaa9",
+    "ridge_labels_sha256": "84161a8bf4405cc90ce1d603b42571c8b536ba911d289a8a2fbd886c32d773d1"
+  },
+  {
+    "file": "20110511063154Uh.jpeg",
+    "selection": "First two filenames in frozen original assessment list; no outcome-based replacement.",
+    "baseline_labels_sha256": "1fe62b695283d186d461002e378102c1ebe7252cc6e5daf59c98a4c32f7db298",
+    "ridge_labels_sha256": "f3198e49ca59686b6754c5032687f9e1d846011106cb35b53bf6ab407bc21ebf"
+  }
+]

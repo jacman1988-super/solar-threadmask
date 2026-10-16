@@ -2,3 +2,6 @@ __pycache__/
 .venv/
 MAGFiLO*/
 *.csv
+
+/work/
+/.pytest_cache/

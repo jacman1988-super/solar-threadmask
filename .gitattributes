@@ -1,2 +1,4 @@
 # Preserve frozen research source bytes and checksums across platforms.
 releases/2026-10-16/** -text
+
+submission-update-2026-10-16/** -text
